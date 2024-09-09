@@ -1,0 +1,1 @@
+C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\integratedPrototype.vcxproj;arm64
