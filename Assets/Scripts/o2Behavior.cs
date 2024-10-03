@@ -18,7 +18,7 @@ public class o2Behavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(1.0f, 0.1f, 1.0f));
+        Vector3 edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.95f, 0.1f, 1.5f));
         transform.position = edgePosition;
         Debug.Log("Position of o22 sphere: " + transform.position.x + " " + transform.position.y + " " + transform.position.z);
     }

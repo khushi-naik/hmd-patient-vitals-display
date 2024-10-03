@@ -22,9 +22,29 @@ public class DwellBehavior : MonoBehaviour
     private void Awake()
     {
         material = GetComponent<Renderer>().material;
+        textHr.enabled = false;
+        textHr.GetComponent<BoxCollider>().enabled = false;
+        textBp.enabled = false;
+        textO2.enabled = false;
     }
 
     public void OnSelectEntered(SelectEnterEventArgs _)
+    {
+        //material.color = onSelectColor;
+        //textDesc.SetActive(true);
+        textHr.enabled = true;
+        textHr.text = "HR: 60";
+
+        textBp.enabled = true;
+        textBp.text = "BP: " + Bp1ExperimentSequence.bp1Block1Start.ToString();
+
+        textO2.enabled = true;
+        textO2.text = "O2: " + O21ExperimentSequence.o21Block1Start.ToString();
+
+        textHr.GetComponent<BoxCollider>().enabled = true;
+    }
+
+    /*public void OnSelectEntered(SelectEnterEventArgs _)
     {
         //material.color = onSelectColor;
         //textDesc.SetActive(true);
@@ -38,7 +58,7 @@ public class DwellBehavior : MonoBehaviour
         textO2.text = "O2: "+ O21ExperimentSequence.o21Block1Start.ToString();
 
 
-    }
+    }*/
 
     /// <summary>
     /// Triggered when the attached <see cref="StatefulInteractable"/> is de-selected.

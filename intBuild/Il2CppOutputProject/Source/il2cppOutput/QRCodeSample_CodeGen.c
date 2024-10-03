@@ -68,6 +68,16 @@ extern void TestDwellBehavior_Awake_mD2748D2222B063F4C829B64EE274CA906D7F6C22 (v
 extern void TestDwellBehavior_OnSelectEntered_m88D0F3BE180707F02E420E4A9B9CB209DD659D23 (void);
 extern void TestDwellBehavior_OnSelectExited_mB691C1378D8C8C947E04CDB063D41FE467A96148 (void);
 extern void TestDwellBehavior__ctor_mA19D7E0C3A408D45EEEC9DB1DE6ABA91C0D0C53B (void);
+extern void TextGazeBehavior_OnGazeHoverEntered_m9EE8A31814278793E3BDD1DE5DE72C32E0E8E239 (void);
+extern void TextGazeBehavior_OnGazeHoverExited_mB507A90448C7255F0EB1F00A0943983CB3B395BB (void);
+extern void TextGazeBehavior_waiter_m02AE17A2B4AEFEA88B910AB7952ECC7F7A9F69C9 (void);
+extern void TextGazeBehavior__ctor_mF3A3E956844B32297098D5F3965E889927A6797F (void);
+extern void U3CwaiterU3Ed__7__ctor_m095EA0290821DEDEF5C7E26BD50FC9FAEE6519B2 (void);
+extern void U3CwaiterU3Ed__7_System_IDisposable_Dispose_m6CE35D2C2A9CDA8C45D5C2D9C52A227AA20CEFCB (void);
+extern void U3CwaiterU3Ed__7_MoveNext_m1B067EC3F5C50B08EF103603B3817790CDAA6F51 (void);
+extern void U3CwaiterU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB018C7BA960B9AF30B18169B68BC76B30AEB336F (void);
+extern void U3CwaiterU3Ed__7_System_Collections_IEnumerator_Reset_m7928BCEF85090B462B117F673C125C1B5B225A47 (void);
+extern void U3CwaiterU3Ed__7_System_Collections_IEnumerator_get_Current_m1DDF60B6A9D1F8C058BA591DA4710E805BB56B74 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mB981E9792A3A6648B9802B1E929553213C3F4DFB (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mEA36562E824FB44EACAA018C01508842B940B616 (void);
 extern void QRCode_get_PhysicalSize_m43A86888A8B01484C9E749A37F20A4CFD8C85D32 (void);
@@ -131,7 +141,13 @@ extern void SpatialGraphNode_set_Id_mA67CF505351515D17345D2AF74283B7CFA8D8D25 (v
 extern void SpatialGraphNode_FromStaticNodeId_mA150128398834F061ECC85B460DC49C1F0D94FB0 (void);
 extern void SpatialGraphNode_TryLocate_mEEB3F8ADA514AB2561AE34EB423168E1DEACCC46 (void);
 extern void SpatialGraphNode__ctor_m08C04B390A4CCB0F63AF09FF266F7EC70210B89B (void);
-static Il2CppMethodPointer s_methodPointers[128] = 
+extern void FollowEyeGaze_Awake_m8164E382F27D1F3D92D663FB00DA74A0579DAEF6 (void);
+extern void FollowEyeGaze_OnEnable_mF581D1CA5FE23104CE7962C4F8EA6873B2979E0C (void);
+extern void FollowEyeGaze_OnDisable_mA3B2CED1B7C4F144109354803C847B7F3501E374 (void);
+extern void FollowEyeGaze_Update_mF5B9741EB929BEB2000753D196C111037C8C9BF2 (void);
+extern void FollowEyeGaze_FollowEyeGazeAction_m9E68E99FA7743C4118516843948DB4C7938766B5 (void);
+extern void FollowEyeGaze__ctor_m471553EFC9573FF6357FDEC1302F008B88D8AA5C (void);
+static Il2CppMethodPointer s_methodPointers[144] = 
 {
 	Bp1Block__ctor_m41449A90B75F0DA20C231B91DBA8E8727DD284B2,
 	Bp1ExperimentSequence__ctor_m0985E15CB8A29892E6CE111B27874200F2BA5CE9,
@@ -189,6 +205,16 @@ static Il2CppMethodPointer s_methodPointers[128] =
 	TestDwellBehavior_OnSelectEntered_m88D0F3BE180707F02E420E4A9B9CB209DD659D23,
 	TestDwellBehavior_OnSelectExited_mB691C1378D8C8C947E04CDB063D41FE467A96148,
 	TestDwellBehavior__ctor_mA19D7E0C3A408D45EEEC9DB1DE6ABA91C0D0C53B,
+	TextGazeBehavior_OnGazeHoverEntered_m9EE8A31814278793E3BDD1DE5DE72C32E0E8E239,
+	TextGazeBehavior_OnGazeHoverExited_mB507A90448C7255F0EB1F00A0943983CB3B395BB,
+	TextGazeBehavior_waiter_m02AE17A2B4AEFEA88B910AB7952ECC7F7A9F69C9,
+	TextGazeBehavior__ctor_mF3A3E956844B32297098D5F3965E889927A6797F,
+	U3CwaiterU3Ed__7__ctor_m095EA0290821DEDEF5C7E26BD50FC9FAEE6519B2,
+	U3CwaiterU3Ed__7_System_IDisposable_Dispose_m6CE35D2C2A9CDA8C45D5C2D9C52A227AA20CEFCB,
+	U3CwaiterU3Ed__7_MoveNext_m1B067EC3F5C50B08EF103603B3817790CDAA6F51,
+	U3CwaiterU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB018C7BA960B9AF30B18169B68BC76B30AEB336F,
+	U3CwaiterU3Ed__7_System_Collections_IEnumerator_Reset_m7928BCEF85090B462B117F673C125C1B5B225A47,
+	U3CwaiterU3Ed__7_System_Collections_IEnumerator_get_Current_m1DDF60B6A9D1F8C058BA591DA4710E805BB56B74,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mB981E9792A3A6648B9802B1E929553213C3F4DFB,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mEA36562E824FB44EACAA018C01508842B940B616,
 	QRCode_get_PhysicalSize_m43A86888A8B01484C9E749A37F20A4CFD8C85D32,
@@ -261,17 +287,23 @@ static Il2CppMethodPointer s_methodPointers[128] =
 	SpatialGraphNode_FromStaticNodeId_mA150128398834F061ECC85B460DC49C1F0D94FB0,
 	SpatialGraphNode_TryLocate_mEEB3F8ADA514AB2561AE34EB423168E1DEACCC46,
 	SpatialGraphNode__ctor_m08C04B390A4CCB0F63AF09FF266F7EC70210B89B,
+	FollowEyeGaze_Awake_m8164E382F27D1F3D92D663FB00DA74A0579DAEF6,
+	FollowEyeGaze_OnEnable_mF581D1CA5FE23104CE7962C4F8EA6873B2979E0C,
+	FollowEyeGaze_OnDisable_mA3B2CED1B7C4F144109354803C847B7F3501E374,
+	FollowEyeGaze_Update_mF5B9741EB929BEB2000753D196C111037C8C9BF2,
+	FollowEyeGaze_FollowEyeGazeAction_m9E68E99FA7743C4118516843948DB4C7938766B5,
+	FollowEyeGaze__ctor_m471553EFC9573FF6357FDEC1302F008B88D8AA5C,
 };
 extern void U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk (void);
 extern void U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk (void);
 extern void ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] = 
 {
-	{ 0x06000062, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
-	{ 0x06000063, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
-	{ 0x06000070, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
+	{ 0x0600006C, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
+	{ 0x0600006D, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
+	{ 0x0600007A, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[128] = 
+static const int32_t s_InvokerIndices[144] = 
 {
 	3795,
 	8820,
@@ -329,6 +361,16 @@ static const int32_t s_InvokerIndices[128] =
 	6948,
 	6948,
 	8820,
+	8820,
+	8820,
+	8675,
+	8820,
+	6906,
+	8820,
+	8538,
+	8675,
+	8820,
+	8675,
 	13134,
 	8820,
 	8736,
@@ -401,12 +443,18 @@ static const int32_t s_InvokerIndices[128] =
 	12592,
 	2257,
 	8820,
+	8820,
+	8820,
+	8820,
+	8820,
+	7145,
+	8820,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x02000019, { 3, 3 } },
-	{ 0x02000020, { 6, 5 } },
-	{ 0x06000045, { 0, 3 } },
+	{ 0x0200001B, { 3, 3 } },
+	{ 0x02000022, { 6, 5 } },
+	{ 0x0600004F, { 0, 3 } },
 };
 extern const uint32_t g_rgctx_TData_t839F02FA7777FEF1BD27577E8384BD4EC15A2872;
 extern const uint32_t g_rgctx_QRCodeEventArgs_1_t169DE04BB5A9946810D16142DDF514F1C813FA0D;
@@ -437,7 +485,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule;
 const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule = 
 {
 	"QRCodeSample.dll",
-	128,
+	144,
 	s_methodPointers,
 	3,
 	s_adjustorThunks,
