@@ -493,7 +493,7 @@ struct U3CUpdateCollidersAfterOnTriggerStayU3Ed__67_t46F82DAEA9A86DE3A36CD17D5BA
 	RuntimeObject* ___U3CU3E2__current;
 	XRSocketInteractor_t955B5778E5057E61463018DC1817B84363C54591* ___U3CU3E4__this;
 };
-struct U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712  : public RuntimeObject
+struct U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -7133,9 +7133,9 @@ IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CUpdateCollidersAf
 	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CUpdateCollidersAfterOnTriggerStayU3Ed__67_t46F82DAEA9A86DE3A36CD17D5BAAAC65AA34A202_ComCallableWrapper(obj));
 }
 
-struct U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCallableWrapper>, IClosable_t408735E2F18F562F8A87A4C359E73D7C30A1D301
+struct U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D_ComCallableWrapper>, IClosable_t408735E2F18F562F8A87A4C359E73D7C30A1D301
 {
-	inline U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCallableWrapper>(obj) {}
+	inline U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D_ComCallableWrapper(RuntimeObject* obj) : il2cpp::vm::CachedCCWBase<U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D_ComCallableWrapper>(obj) {}
 
 	virtual il2cpp_hresult_t STDCALL QueryInterface(const Il2CppGuid& iid, void** object) IL2CPP_OVERRIDE
 	{
@@ -7216,15 +7216,15 @@ struct U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCa
 	}
 };
 
-IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712(RuntimeObject* obj)
+IL2CPP_EXTERN_C Il2CppIUnknown* CreateComCallableWrapperFor_U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D(RuntimeObject* obj)
 {
-	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCallableWrapper));
+	void* memory = il2cpp::utils::Memory::Malloc(sizeof(U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D_ComCallableWrapper));
 	if (memory == NULL)
 	{
 		il2cpp_codegen_raise_out_of_memory_exception();
 	}
 
-	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CPlayAnimationsU3Ed__11_t27BFF682E9676E7213A9AA0ED63F42D9DCD06712_ComCallableWrapper(obj));
+	return static_cast<Il2CppIManagedObjectHolder*>(new(memory) U3CPlayAnimationsU3Ed__16_t49050C6823E21B7BCE5F7C5582358A7FE63B4A4D_ComCallableWrapper(obj));
 }
 
 struct U3CGetBaseLayoutsU3Ed__24_tFACFE5E75EF61B27C631E4AAF81E6C3642719012_ComCallableWrapper IL2CPP_FINAL : il2cpp::vm::CachedCCWBase<U3CGetBaseLayoutsU3Ed__24_tFACFE5E75EF61B27C631E4AAF81E6C3642719012_ComCallableWrapper>, IBindableIterable_t257967EF5CDA5DFD63615802571892212B01796C, IClosable_t408735E2F18F562F8A87A4C359E73D7C30A1D301

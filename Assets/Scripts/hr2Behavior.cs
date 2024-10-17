@@ -6,7 +6,7 @@ public class hr2Behavior : MonoBehaviour
 {
     public Camera mainCamera;
     private Animator anim;
-    private float speed = 1f;
+    private float speed = 0.15f;
     private float animationTimer = 0f;
     Vector3 edgePosition;
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class hr2Behavior : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
-        edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.95f, 0.5f, 1.5f));
+        edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.95f, 0.5f, 1f));
         transform.position = edgePosition;
     }
 
@@ -28,14 +28,15 @@ public class hr2Behavior : MonoBehaviour
         if (animationTimer >= 1f)
         {
             animationTimer = 0f;
-            transform.position = edgePosition;
+            transform.position = mainCamera.ViewportToWorldPoint(new Vector3(0.95f, 0.5f, 1f));
             
         }
         else {
-            transform.Translate(0, 0, speed * Time.deltaTime);
+            //transform.Translate(0, 0, speed * Time.deltaTime, Space.World);
+            transform.Translate(-Vector3.forward * speed *Time.deltaTime, Space.World);
         }
         
-        Debug.Log("Position of bp2 sphere: " + transform.position.x + " " + transform.position.y + " " + transform.position.z);
+        //Debug.Log("Position of hr2 sphere: " + transform.position.x + " " + transform.position.y + " " + transform.position.z);
 
     }
 }

@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultDistanceInMeters: 1
-  idleStateColor: {r: 0.61960787, g: 0.8901961, b: 0, a: 0.5019608}
-  hightlightStateColor: {r: 0.61972624, g: 0.8897059, b: 0, a: 0.5019608}
+  idleStateColor: {r: 0.8901961, g: 0.5091746, b: 0, a: 0.5019608}
+  hightlightStateColor: {r: 0, g: 0.8901961, b: 0.87393093, a: 0.5019608}
   gazeController: {fileID: 0}
   _gazeTranslationAction:
     m_UseReference: 0

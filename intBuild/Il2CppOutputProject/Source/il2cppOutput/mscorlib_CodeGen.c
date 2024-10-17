@@ -9433,6 +9433,7 @@ extern void StreamWriter__ctor_m54CE9C47ED974C0589400DA9BC2AB3F7F481595B (void);
 extern void StreamWriter__ctor_m1E6CB00AA57A3E35968208F705E444511AD9B5DC (void);
 extern void StreamWriter__ctor_m07CDDF5BC8553960286FA1BFF8BBA2159835EBCC (void);
 extern void StreamWriter__ctor_m7C83908E2616C22FA632EF67E36E137932E534D7 (void);
+extern void StreamWriter__ctor_m6432CEFDE44A6B720887B85AADC39303F8D0689D (void);
 extern void StreamWriter__ctor_m1F86E05C0B270E003570FE854A7B32775F6FD797 (void);
 extern void StreamWriter_Init_m87624EC42F9CD27B6D43829466EFA800002D44D6 (void);
 extern void StreamWriter_Close_mA28A774C95D57CD68B24F2221110E120ECC765E2 (void);
@@ -9966,7 +9967,7 @@ extern void FileSystemName_MatchPattern_mB8ABD704DB2D7B1050B87CEFED828141274DE1B
 extern void FileSystemName__cctor_m306CEEC577DB3B7813696282439F256BCF815CDC (void);
 extern void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m52370B9D7DEAF095B34C6AE27338067A3A1CF886 (void);
 extern void ThrowStub_ThrowNotSupportedException_m02C318CA8F5812C025CBEDEA07A5DE5D0FDBB25F (void);
-static Il2CppMethodPointer s_methodPointers[11751] = 
+static Il2CppMethodPointer s_methodPointers[11752] = 
 {
 	Interop_GetRandomBytes_mCA054362D47D8B1BB32A7501F26A646DD8CA6947,
 	Kernel32_FreeLibrary_mD37BF4DEA121402FE41BADA68C7594E9A4D12C7C,
@@ -21136,6 +21137,7 @@ static Il2CppMethodPointer s_methodPointers[11751] =
 	StreamWriter__ctor_m1E6CB00AA57A3E35968208F705E444511AD9B5DC,
 	StreamWriter__ctor_m07CDDF5BC8553960286FA1BFF8BBA2159835EBCC,
 	StreamWriter__ctor_m7C83908E2616C22FA632EF67E36E137932E534D7,
+	StreamWriter__ctor_m6432CEFDE44A6B720887B85AADC39303F8D0689D,
 	StreamWriter__ctor_m1F86E05C0B270E003570FE854A7B32775F6FD797,
 	StreamWriter_Init_m87624EC42F9CD27B6D43829466EFA800002D44D6,
 	StreamWriter_Close_mA28A774C95D57CD68B24F2221110E120ECC765E2,
@@ -23394,14 +23396,14 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[839] =
 	{ 0x060026F5, DictionaryEntry_get_Key_m09845C00732E530E6FCB9042079E90D3912215FE_AdjustorThunk },
 	{ 0x060026F6, DictionaryEntry_get_Value_m75FD18FE968AE131F28AA2CB0DF4895EBA39075E_AdjustorThunk },
 	{ 0x06002AF6, DisableMediaInsertionPrompt_Dispose_m55D98E173543F23BE6030D5E39BFEC3633890D0C_AdjustorThunk },
-	{ 0x06002CB4, U3CCopyToAsyncInternalU3Ed__28_MoveNext_m4F23D664DA008A9EFBA2D38F3B88C2AF38F72B62_AdjustorThunk },
-	{ 0x06002CB5, U3CCopyToAsyncInternalU3Ed__28_SetStateMachine_mA058C23A9D8D3C3BB05C0A680C824B799DBE0E20_AdjustorThunk },
-	{ 0x06002CB6, U3CFinishWriteAsyncU3Ed__57_MoveNext_m6611A31C40F53E3FA1755CAAA49B1D5CA4BB85A2_AdjustorThunk },
-	{ 0x06002CB7, U3CFinishWriteAsyncU3Ed__57_SetStateMachine_m4DD6CB435CD2548845E053885EBA2D9678A294BC_AdjustorThunk },
-	{ 0x06002CB8, U3CU3CReadAsyncU3Eg__FinishReadAsyncU7C44_0U3Ed_MoveNext_m6FC0EF7F617D06511C1735FA80403EBA956DF0AE_AdjustorThunk },
-	{ 0x06002CB9, U3CU3CReadAsyncU3Eg__FinishReadAsyncU7C44_0U3Ed_SetStateMachine_m7AAEF38DA7DBA96DF8C6E5FD244D2A8013192513_AdjustorThunk },
+	{ 0x06002CB5, U3CCopyToAsyncInternalU3Ed__28_MoveNext_m4F23D664DA008A9EFBA2D38F3B88C2AF38F72B62_AdjustorThunk },
+	{ 0x06002CB6, U3CCopyToAsyncInternalU3Ed__28_SetStateMachine_mA058C23A9D8D3C3BB05C0A680C824B799DBE0E20_AdjustorThunk },
+	{ 0x06002CB7, U3CFinishWriteAsyncU3Ed__57_MoveNext_m6611A31C40F53E3FA1755CAAA49B1D5CA4BB85A2_AdjustorThunk },
+	{ 0x06002CB8, U3CFinishWriteAsyncU3Ed__57_SetStateMachine_m4DD6CB435CD2548845E053885EBA2D9678A294BC_AdjustorThunk },
+	{ 0x06002CB9, U3CU3CReadAsyncU3Eg__FinishReadAsyncU7C44_0U3Ed_MoveNext_m6FC0EF7F617D06511C1735FA80403EBA956DF0AE_AdjustorThunk },
+	{ 0x06002CBA, U3CU3CReadAsyncU3Eg__FinishReadAsyncU7C44_0U3Ed_SetStateMachine_m7AAEF38DA7DBA96DF8C6E5FD244D2A8013192513_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[11751] = 
+static const int32_t s_InvokerIndices[11752] = 
 {
 	11915,
 	12346,
@@ -34571,6 +34573,7 @@ static const int32_t s_InvokerIndices[11751] =
 	3795,
 	1341,
 	6948,
+	3776,
 	1280,
 	1341,
 	8820,
@@ -35445,7 +35448,7 @@ static const Il2CppTokenRangePair s_rgctxIndices[284] =
 	{ 0x060029FA, { 1987, 12 } },
 	{ 0x06002A11, { 2042, 4 } },
 	{ 0x06002A12, { 2046, 5 } },
-	{ 0x06002D9E, { 2319, 3 } },
+	{ 0x06002D9F, { 2319, 3 } },
 };
 extern const uint32_t g_rgctx_SafeHandleCache_1_t4B3F3C8B3323A2A02E76D4FA7FC806086F4A0E77;
 extern const uint32_t g_rgctx_T_t925CCF30732BBB569A9FD55CD005C2FB847A8AA8;
@@ -40176,7 +40179,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 const Il2CppCodeGenModule g_mscorlib_CodeGenModule = 
 {
 	"mscorlib.dll",
-	11751,
+	11752,
 	s_methodPointers,
 	839,
 	s_adjustorThunks,
