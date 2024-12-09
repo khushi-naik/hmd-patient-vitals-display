@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>AFEF81C954096C7619FB7AB95C478C8870F8D9528AAD3EB8E83B5B0F1BF15C5D</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E457AF086AC08B099F7AA097A66963069A5397F48B0788BD733CB94C3336AB2F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>integratedPrototype_1.0.0.0_arm64__pzq3xp76mxafg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>integratedPrototype_pzq3xp76mxafg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>integratedPrototype</RegisteredPackageID>
@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-14T16:58:17.577</Modified>
+      <Modified>2024-11-28T19:29:48.250</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\integratedPrototype.exe">
       <PackagePath>integratedPrototype.exe</PackagePath>
-      <Modified>2024-10-17T19:55:02.485</Modified>
+      <Modified>2024-12-09T21:28:34.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\UnityPlayer.winmd">
       <PackagePath>UnityPlayer.winmd</PackagePath>
@@ -98,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
-      <Modified>2024-10-17T19:53:57.004</Modified>
+      <Modified>2024-12-09T21:26:27.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\nativePlugins.txt">
       <PackagePath>Data\nativePlugins.txt</PackagePath>
@@ -106,23 +106,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\il2cpp_data\Metadata\global-metadata.dat">
       <PackagePath>Data\il2cpp_data\Metadata\global-metadata.dat</PackagePath>
-      <Modified>2024-10-17T19:54:18.827</Modified>
+      <Modified>2024-12-09T21:26:49.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\il2cpp_data\Resources\mscorlib.dll-resources.dat">
       <PackagePath>Data\il2cpp_data\Resources\mscorlib.dll-resources.dat</PackagePath>
-      <Modified>2024-10-17T19:54:18.822</Modified>
+      <Modified>2024-12-09T21:26:49.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
-      <Modified>2024-10-17T15:39:53.996</Modified>
+      <Modified>2024-12-03T21:48:58.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\level0">
       <PackagePath>Data\level0</PackagePath>
-      <Modified>2024-10-17T15:39:53.997</Modified>
+      <Modified>2024-12-03T21:48:58.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\Resources\unity_builtin_extra">
       <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
-      <Modified>2024-10-17T15:39:53.997</Modified>
+      <Modified>2024-12-03T21:48:58.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
@@ -130,31 +130,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
-      <Modified>2024-10-17T15:39:53.996</Modified>
+      <Modified>2024-12-03T21:48:58.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\resources.assets">
       <PackagePath>Data\resources.assets</PackagePath>
-      <Modified>2024-10-17T15:39:53.998</Modified>
+      <Modified>2024-12-03T21:48:58.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
-      <Modified>2024-10-17T15:39:53.996</Modified>
+      <Modified>2024-12-03T21:48:58.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\globalgamemanagers.assets.resS">
       <PackagePath>Data\globalgamemanagers.assets.resS</PackagePath>
-      <Modified>2024-10-17T15:39:53.998</Modified>
+      <Modified>2024-12-03T21:48:58.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
-      <Modified>2024-10-17T15:39:53.996</Modified>
+      <Modified>2024-12-03T21:48:58.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\resources.assets.resS">
       <PackagePath>Data\resources.assets.resS</PackagePath>
-      <Modified>2024-10-17T15:39:53.997</Modified>
+      <Modified>2024-12-03T21:48:58.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\sharedassets0.assets.resS">
       <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
-      <Modified>2024-10-17T15:39:53.996</Modified>
+      <Modified>2024-12-03T21:48:58.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\integratedPrototype\Data\RuntimeInitializeOnLoads.json">
       <PackagePath>Data\RuntimeInitializeOnLoads.json</PackagePath>
@@ -194,7 +194,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\GameAssembly.dll">
       <PackagePath>GameAssembly.dll</PackagePath>
-      <Modified>2024-10-17T19:54:59.941</Modified>
+      <Modified>2024-12-09T21:28:32.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Unity\Hub\Editor\2022.3.23f1\Editor\Data\PlaybackEngines\MetroSupport\Players\UAP\il2cpp\ARM64\Release\baselib.dll">
       <PackagePath>baselib.dll</PackagePath>
@@ -202,7 +202,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-08-14T16:58:16.297</Modified>
+      <Modified>2024-11-28T19:29:48.204</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

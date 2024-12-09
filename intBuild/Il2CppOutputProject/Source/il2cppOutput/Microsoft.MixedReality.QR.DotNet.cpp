@@ -1081,10 +1081,6 @@ struct QRCodeWatcherAccessStatus_tAACDA0718E98B2668EEB22C52E884D3BE47844B3
 {
 	int32_t ___value__;
 };
-struct QRVersion_tBACE6ADBBB1188E41A8010E5D9C980F706ACDAD8 
-{
-	int32_t ___value__;
-};
 struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B 
 {
 	intptr_t ___value;
@@ -2112,7 +2108,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CompletedHandler_Invoke_m265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IQRCode__ctor_m7F9C70A6003C5A7A6ED0C3EE7C20A717DECA0992 (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, ObjectReference_1_t73C66B0EF8178F1D80685A7D532CDFFE8F2BDA05* ___0_obj, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QRCode__ctor_mF61F8CE1E8FBE4B9B69BB67ACBD9EB0DCE9FF3A6 (QRCode_tCFF46F069EB07095083E7DA4B0B9C7D2B9647C32* __this, IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* ___0_code, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsGuid_Invoke_m467847EAC22FBDB64ABB5E393DF95CBE572AB412_inline (_get_PropertyAsGuid_tA66E09BEBB536EB254582D47D939D0BE33DE54DC* __this, intptr_t ___0_thisPtr, Guid_t* ___1_value, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsEnum_Invoke_mE8CE6F279C8BC5A05626FD92DED2517E3C963E4A_inline (_get_PropertyAsEnum_tD6BB7E6442FF3055A0F8E4A042AB1072AD042AE0* __this, intptr_t ___0_thisPtr, int32_t* ___1_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsFloat_Invoke_mCF17DCE8E61890D2D64F28D17BC869AD9386FF2F_inline (_get_PropertyAsFloat_tD90D338B5A06E45D2AFA55EEB9E68C06F9911F86* __this, intptr_t ___0_thisPtr, float* ___1_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsObject_Invoke_mCCCAA1AC9BBC47B4AD5C79D0CE4B289E443D227A_inline (_get_PropertyAsObject_tE254EEAF7746955498BBEDE1D04E2C1C837F2E11* __this, intptr_t ___0_thisPtr, intptr_t* ___1_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HString__ctor_m7CC40A4BCB0244E53D92015C1D94C97DDF918C8A (HString_t734316CC9188B0454711CDE6F9D311FD99F46E54* __this, intptr_t* ___0_handle, const RuntimeMethod* method) ;
@@ -2122,7 +2117,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsDateTime_I
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 DateTimeOffset_FromFileTime_m91913654F9CA7F5367A35D1E25E321D7735CC32C (int64_t ___0_fileTime, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Guid_t IQRCode_get_Id_m4B54D0BFD68B696B80F5D43030F4EDECA0E07D15 (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Guid_t IQRCode_get_SpatialGraphNodeId_mB1801D3DE23CF020EFFC53D7E8B561C186D2D837 (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IQRCode_get_Version_mB77D51EDD56E773B5734E88FEDD7EDEB1BE8DDA2 (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float IQRCode_get_PhysicalSideLength_mBF586290F3B1F85B976CD37DF2BF85A95DB4940D (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IQRCode_get_Data_mAF42D8CD2BA38C42C07F18357E87BEBD7CD3FB0B (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A IQRCode_get_SystemRelativeLastDetectedTime_m550DA8A6BFD8BF1E7E4AE5AB59D09453B134C202 (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) ;
@@ -8025,14 +8019,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3C_OnCompleted
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* IQRCode_op_Implicit_mA8EF56D9DF24D0D87C397BF80A875364F8833C04 (ObjectReference_1_t73C66B0EF8178F1D80685A7D532CDFFE8F2BDA05* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8125,32 +8111,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Guid_t IQRCode_get_SpatialGraphNodeId_mB1801D
 		Marshal_ThrowExceptionForHR_m9D32E47B8A1FB2D680A40138CD68E7846A27234B(L_5, NULL);
 		Guid_t L_6 = V_0;
 		return L_6;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IQRCode_get_Version_mB77D51EDD56E773B5734E88FEDD7EDEB1BE8DDA2 (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	{
-		ObjectReference_1_t73C66B0EF8178F1D80685A7D532CDFFE8F2BDA05* L_0 = __this->____obj;
-		NullCheck(L_0);
-		Vftbl_t246CF34A48540EEF036DC4A21D032D1EAA221C68* L_1 = (Vftbl_t246CF34A48540EEF036DC4A21D032D1EAA221C68*)(&L_0->___Vftbl);
-		_get_PropertyAsEnum_tD6BB7E6442FF3055A0F8E4A042AB1072AD042AE0* L_2 = L_1->___get_Version;
-		ObjectReference_1_t73C66B0EF8178F1D80685A7D532CDFFE8F2BDA05* L_3 = __this->____obj;
-		NullCheck(L_3);
-		intptr_t L_4 = ((IObjectReference_tA7285262A225D5A1425F0DF9B0F6C4F0C201AE38*)L_3)->___ThisPtr;
-		NullCheck(L_2);
-		int32_t L_5;
-		L_5 = _get_PropertyAsEnum_Invoke_mE8CE6F279C8BC5A05626FD92DED2517E3C963E4A_inline(L_2, L_4, (int32_t*)((uintptr_t)(&V_0)), NULL);
-		il2cpp_codegen_runtime_class_init_inline(Marshal_tD976A56A90263C3CE2B780D4B1CADADE2E70B4A7_il2cpp_TypeInfo_var);
-		Marshal_ThrowExceptionForHR_m9D32E47B8A1FB2D680A40138CD68E7846A27234B(L_5, NULL);
-		int32_t L_6 = V_0;
-		return (int32_t)(L_6);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float IQRCode_get_PhysicalSideLength_mBF586290F3B1F85B976CD37DF2BF85A95DB4940D (IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* __this, const RuntimeMethod* method) 
@@ -8581,16 +8541,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Guid_t QRCode_get_SpatialGraphNodeId_m6C1C0A3
 		NullCheck(L_0);
 		Guid_t L_1;
 		L_1 = IQRCode_get_SpatialGraphNodeId_mB1801D3DE23CF020EFFC53D7E8B561C186D2D837(L_0, NULL);
-		return L_1;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t QRCode_get_Version_mE02944B519F15EDF45FDCBE82282B10D37D54002 (QRCode_tCFF46F069EB07095083E7DA4B0B9C7D2B9647C32* __this, const RuntimeMethod* method) 
-{
-	{
-		IQRCode_t5C056CCD2858DE2958CC806765605E6CBB243109* L_0 = __this->____interface;
-		NullCheck(L_0);
-		int32_t L_1;
-		L_1 = IQRCode_get_Version_mB77D51EDD56E773B5734E88FEDD7EDEB1BE8DDA2(L_0, NULL);
 		return L_1;
 	}
 }
@@ -10540,11 +10490,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CompletedHandler_Invoke_m265
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsGuid_Invoke_m467847EAC22FBDB64ABB5E393DF95CBE572AB412_inline (_get_PropertyAsGuid_tA66E09BEBB536EB254582D47D939D0BE33DE54DC* __this, intptr_t ___0_thisPtr, Guid_t* ___1_value, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, Guid_t*, const RuntimeMethod*);
-	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_thisPtr, ___1_value, reinterpret_cast<RuntimeMethod*>(__this->___method));
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsEnum_Invoke_mE8CE6F279C8BC5A05626FD92DED2517E3C963E4A_inline (_get_PropertyAsEnum_tD6BB7E6442FF3055A0F8E4A042AB1072AD042AE0* __this, intptr_t ___0_thisPtr, int32_t* ___1_value, const RuntimeMethod* method) 
-{
-	typedef int32_t (*FunctionPointerType) (RuntimeObject*, intptr_t, int32_t*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_thisPtr, ___1_value, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t _get_PropertyAsFloat_Invoke_mCF17DCE8E61890D2D64F28D17BC869AD9386FF2F_inline (_get_PropertyAsFloat_tD90D338B5A06E45D2AFA55EEB9E68C06F9911F86* __this, intptr_t ___0_thisPtr, float* ___1_value, const RuntimeMethod* method) 

@@ -668,6 +668,8 @@
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppCCWs__230.cpp">
     </ClCompile>
+    <ClCompile Include="Source\il2cppOutput\Il2CppCCWs__231.cpp">
+    </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppCCWs__24.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Il2CppCCWs__25.cpp">
@@ -986,6 +988,8 @@
     <ClCompile Include="Source\il2cppOutput\System__3.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\System__4.cpp">
+    </ClCompile>
+    <ClCompile Include="Source\il2cppOutput\System__5.cpp">
     </ClCompile>
     <ClCompile Include="Source\il2cppOutput\Unity.InputSystem.cpp">
     </ClCompile>

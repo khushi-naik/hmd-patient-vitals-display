@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 namespace QRTracking
 {
     public class QRCodesVisualizer : MonoBehaviour
     {
         public GameObject qrCodePrefab;
+        //public TextMeshProUGUI test2;
 
         private SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
         private Queue<ActionData> pendingActions = new Queue<ActionData>();
@@ -32,6 +35,7 @@ namespace QRTracking
         void Start()
         {
             Debug.Log("QRCodesVisualizer start");
+            //test2.text = "visualize start";
             qrCodesObjectsList = new SortedDictionary<System.Guid, GameObject>();
 
             QRCodesManager.Instance.QRCodesTrackingStateChanged += Instance_QRCodesTrackingStateChanged;
@@ -40,8 +44,10 @@ namespace QRTracking
             QRCodesManager.Instance.QRCodeRemoved += Instance_QRCodeRemoved;
             if (qrCodePrefab == null)
             {
+                //test2.text = "no prefab";
                 throw new System.Exception("Prefab not assigned");
             }
+
         }
         private void Instance_QRCodesTrackingStateChanged(object sender, bool status)
         {
@@ -54,6 +60,7 @@ namespace QRTracking
         private void Instance_QRCodeAdded(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
             Debug.Log("QRCodesVisualizer Instance_QRCodeAdded");
+            //test2.text = "visualize add";
 
             lock (pendingActions)
             {
@@ -64,6 +71,7 @@ namespace QRTracking
         private void Instance_QRCodeUpdated(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
             Debug.Log("QRCodesVisualizer Instance_QRCodeUpdated");
+            //test2.text = "visualize update";
 
             lock (pendingActions)
             {
@@ -74,6 +82,7 @@ namespace QRTracking
         private void Instance_QRCodeRemoved(object sender, QRCodeEventArgs<Microsoft.MixedReality.QR.QRCode> e)
         {
             Debug.Log("QRCodesVisualizer Instance_QRCodeRemoved");
+            //test2.text = "visualize remove";
 
             lock (pendingActions)
             {

@@ -26,153 +26,102 @@ public class oBehaviourScript : MonoBehaviour
 
     private void Update()
     {
-        if (currentBlockIndex < testArray.Length)
+        if (CommonPrototypeVariables.isExperimentStarted)
         {
-            O21Block item = testArray[currentBlockIndex];
-            float duration = item.duration[currentValueIndex];
-
-            // Check if the current value change has finished
-            if (elapsedTime >= duration)
+            if (currentBlockIndex < testArray.Length)
             {
-                // Move to the next value change
-                currentValueIndex++;
-                elapsedTime = 0.0f;
+                O21Block item = testArray[currentBlockIndex];
+                float duration = item.duration[currentValueIndex];
 
-                // Check if all value changes in the current block have finished
-                if (currentValueIndex >= item.valueChange.Length)
+                // Check if the current value change has finished
+                if (elapsedTime >= duration)
                 {
-                    // Move to the next block
-                    currentBlockIndex++;
-                    currentValueIndex = 0;
-                }
-            }
+                    // Move to the next value change
+                    currentValueIndex++;
+                    elapsedTime = 0.0f;
 
-            // Play different animations based on conditions
-            if (item.valueChange[currentValueIndex].Contains("increase"))
-            {
-                if (elapsedTimeNumber >= updateTime)
-                {
-                    O21ExperimentSequence.o21Block1Start++;
-                    elapsedTimeNumber = 0.0f;
-                }
-                if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
-                {
-                    anim.Play("o2ReturnLowToNormal");
-                }
-                else if (O21ExperimentSequence.o21Block1Start <= 89)
-                {
-                    anim.Play("o2ReturnVeryLowToLow");
-                }
-                previousTrend = "increase";
-                
-            }
-            else if (item.valueChange[currentValueIndex].Contains("decrease"))
-            {
-                if (elapsedTimeNumber >= updateTime)
-                {
-                    O21ExperimentSequence.o21Block1Start--;
-                    elapsedTimeNumber = 0.0f;
-                }
-                if (O21ExperimentSequence.o21Block1Start>=90 && O21ExperimentSequence.o21Block1Start<=95)
-                {
-                    anim.Play("o2NormalToLow");
-                }
-                else if(O21ExperimentSequence.o21Block1Start <= 89)
-                {
-                    anim.Play("o2LowToVeryLow");
-                }
-                previousTrend = "decrease";
-
-            }
-            else if (item.valueChange[currentValueIndex].Contains("static"))
-            {
-                if (O21ExperimentSequence.o21Block1Start >= 96)
-                {
-                    anim.Play("justMoveO");
-                }
-                else if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
-                {
-                    if (previousTrend.Contains("increase") )
+                    // Check if all value changes in the current block have finished
+                    if (currentValueIndex >= item.valueChange.Length)
                     {
-                        anim.Play("o2StaticVeryLowToLow");
+                        // Move to the next block
+                        currentBlockIndex++;
+                        currentValueIndex = 0;
                     }
-                    else
+                }
+
+                // Play different animations based on conditions
+                if (item.valueChange[currentValueIndex].Contains("increase"))
+                {
+                    if (elapsedTimeNumber >= updateTime)
                     {
-                        anim.Play("o2StaticNormalToLow");
+                        O21ExperimentSequence.o21Block1Start++;
+                        elapsedTimeNumber = 0.0f;
                     }
-                    
-                }
-                else if (O21ExperimentSequence.o21Block1Start <= 89)
-                {
-                    anim.Play("o2StaticLowToVeryLow");
-                }
-               
-            }
-
-            // Update the O2 value text
-            textO2.text = "o2: " + O21ExperimentSequence.o21Block1Start.ToString();
-
-            // Increment elapsed time
-            elapsedTime += Time.deltaTime;
-            elapsedTimeNumber += Time.deltaTime;
-        }
-
-        // Reset animation speed
-        anim.speed = 1.0f;
-    }
-    /*IEnumerator PlayAnimations()
-    {
-         
-        //int numStart = O21ExperimentSequence.o21Block1Start;
-        foreach (O21Block item in testArray)
-        {
-            for (int i = 0; i < item.valueChange.Length; i++)
-            {
-                float elapsedTime = 0f;
-                float elapsedTimeNumber = 0f;
-                float duration = item.duration[i];
-
-                while (elapsedTime < duration)
-                {
-                    anim.speed = 0.3f;
-                    elapsedTime += Time.deltaTime;
-                    elapsedTimeNumber += Time.deltaTime;
-                    //textO2.text = item.valueChange[i] + "\ndur: " +
-                    //  duration.ToString() + "\nelapsed: " + elapsedTime.ToString();
-
-                    // Play different animations based on conditions
-                    if (item.valueChange[i].Contains("increase"))
+                    if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                     {
-                        if (elapsedTimeNumber >= updateTime)
-                        {
-                            //numStart++;
-                            O21ExperimentSequence.o21Block1Start++;
-                            elapsedTimeNumber = 0f;
-                        }
                         anim.Play("o2ReturnLowToNormal");
                     }
-                    else if (item.valueChange[i].Contains("decrease"))
+                    else if (O21ExperimentSequence.o21Block1Start <= 89)
                     {
-                        if (elapsedTimeNumber >= updateTime)
-                        {
-                            //numStart--;
-                            O21ExperimentSequence.o21Block1Start--;
-                            elapsedTimeNumber = 0f;
-                        }
+                        anim.Play("o2ReturnVeryLowToLow");
+                    }
+                    previousTrend = "increase";
+
+                }
+                else if (item.valueChange[currentValueIndex].Contains("decrease"))
+                {
+                    if (elapsedTimeNumber >= updateTime)
+                    {
+                        O21ExperimentSequence.o21Block1Start--;
+                        elapsedTimeNumber = 0.0f;
+                    }
+                    if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
+                    {
                         anim.Play("o2NormalToLow");
                     }
-                    else if (item.valueChange[i].Contains("static"))
+                    else if (O21ExperimentSequence.o21Block1Start <= 89)
+                    {
+                        anim.Play("o2LowToVeryLow");
+                    }
+                    previousTrend = "decrease";
+
+                }
+                else if (item.valueChange[currentValueIndex].Contains("static"))
+                {
+                    if (O21ExperimentSequence.o21Block1Start >= 96)
                     {
                         anim.Play("justMoveO");
                     }
-                    //textO2.text = "O2: " + numStart;
-                    textO2.text = "o2: " + O21ExperimentSequence.o21Block1Start.ToString();
-                    yield return null; // Wait for the next frame
+                    else if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
+                    {
+                        if (previousTrend.Contains("increase"))
+                        {
+                            anim.Play("o2StaticVeryLowToLow");
+                        }
+                        else
+                        {
+                            anim.Play("o2StaticNormalToLow");
+                        }
+
+                    }
+                    else if (O21ExperimentSequence.o21Block1Start <= 89)
+                    {
+                        anim.Play("o2StaticLowToVeryLow");
+                    }
+
                 }
 
-                // Reset animation speed
-                anim.speed = 1f;
+                // Update the O2 value text
+                textO2.text = "o2: " + O21ExperimentSequence.o21Block1Start.ToString();
+
+                // Increment elapsed time
+                elapsedTime += Time.deltaTime;
+                elapsedTimeNumber += Time.deltaTime;
             }
+
+            // Reset animation speed
+            anim.speed = 1.0f;
         }
-    }*/
+    }
+
 }

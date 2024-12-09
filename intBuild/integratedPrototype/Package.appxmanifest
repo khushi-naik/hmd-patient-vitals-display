@@ -28,6 +28,13 @@
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <uap:Capability Name="musicLibrary" />
+    <uap:Capability Name="picturesLibrary" />
+    <Capability Name="privateNetworkClientServer" />
+    <uap:Capability Name="removableStorage" />
+    <uap:Capability Name="videosLibrary" />
     <uap2:Capability Name="spatialPerception" />
     <DeviceCapability Name="webcam" />
     <DeviceCapability Name="microphone" />

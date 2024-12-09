@@ -23,12 +23,12 @@ public class Block1
     }
 }
 
-public static class ExperimentSequenceSingleton
+public static class HR1ExperimentSequence
 {
     public static string inc = "increase";
     public static string dec = "decrease";
     public static string stat = "static";
-    public static int hr1Block1Start = 89;
+    public static int hr1Block1Start = 120;
 
     public static readonly Block1[] hrExperimentBlock1 =
     {

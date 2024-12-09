@@ -707,9 +707,16 @@ PlayerSettings:
   syncCapabilities: 1
   platformCapabilities:
     WindowsStoreApps:
+      VideosLibrary: True
+      MusicLibrary: True
+      PrivateNetworkClientServer: True
+      InternetClientServer: True
+      PicturesLibrary: True
+      RemovableStorage: True
+      WebCam: True
       GazeInput: True
       SpatialPerception: True
-      WebCam: True
+      InternetClient: True
       Microphone: True
   metroTargetDeviceFamilies: {}
   metroFTAName: 
