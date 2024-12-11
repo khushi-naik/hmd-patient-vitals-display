@@ -62,13 +62,15 @@ public class hrBehavior : MonoBehaviour
     {
         if (CommonPrototypeVariables.isExperimentStarted)
         {
+            Block1 currentBlock = expArray[currentBlockIndex];
             if (currentBlockIndex < expArray.Length)
             {
-                Block1 currentBlock = expArray[currentBlockIndex];
+
                 if (elapsedTimeNumber >= updateTime)
                 {
+                    int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     HR1ExperimentSequence.hr1Block1Start = currentBlock.vitalValue[currentValueIndex];
-                    elapsedTimeNumber = 0f;
+                    /*elapsedTimeNumber = 0f;
                     currentValueIndex++;
                     if (currentValueIndex >= currentBlock.vitalValue.Length)
                     {
@@ -83,122 +85,127 @@ public class hrBehavior : MonoBehaviour
                 else
                 {
                     prevValue = 0;
-                }
-                // Play different animations based on conditions
-                if (currentBlock.vitalValue[currentValueIndex] > currentBlock.vitalValue[prevValue])
-                {
-                    if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
+                }*/
+                    // Play different animations based on conditions
+                    if (HR1ExperimentSequence.hr1Block1Start > previousVital)
                     {
-                        anim.Play("hrNormalToHigh");
-                        if (!alarmLog[currentBlockIndex]) {
-                            tcpObj.sendMessage("HR1, normal to high_blockno"+ currentBlockIndex +"_curval"+ currentValueIndex.ToString() +"_prev"+ prevValue + "_blstval"+ HR1ExperimentSequence.hr1Block1Start +","+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                            alarmLog[currentBlockIndex] = true;
-                        }
-
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start >= 121)
-                    {
-                        anim.Play("hrHighToVeryHigh");
-                        if (!alarmLog[currentBlockIndex])
+                        if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
                         {
-                            tcpObj.sendMessage("HR1, high to very high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                            alarmLog[currentBlockIndex] = true;
+                            anim.Play("hrNormalToHigh");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                tcpObj.sendMessage("HR1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+                            }
+
                         }
+                        else if (HR1ExperimentSequence.hr1Block1Start >= 121)
+                        {
+                            anim.Play("hrHighToVeryHigh");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                tcpObj.sendMessage("HR1, high to very high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+                            }
+
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start > 44 && HR1ExperimentSequence.hr1Block1Start <= 59)
+                        {
+                            anim.Play("hrReturnLowToNormal");
+                            alarmLog[currentBlockIndex] = false;
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start <= 44)
+                        {
+                            anim.Play("hrReturnVeryLowToLow");
+                            alarmLog[currentBlockIndex] = false;
+                        }
+                        previousTrend = "increase";
 
                     }
-                    else if (HR1ExperimentSequence.hr1Block1Start > 44 && HR1ExperimentSequence.hr1Block1Start <= 59)
+                    else if (HR1ExperimentSequence.hr1Block1Start < previousVital)
                     {
-                        anim.Play("hrReturnLowToNormal");
+                        if (HR1ExperimentSequence.hr1Block1Start <= 59 && HR1ExperimentSequence.hr1Block1Start > 44)
+                        {
+                            anim.Play("hrNormalToLow");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                tcpObj.sendMessage("HR1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+                            }
+
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start <= 44)
+                        {
+                            anim.Play("hrLowToVeryLow");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                tcpObj.sendMessage("HR1, low to very low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+                            }
+
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
+                        {
+                            anim.Play("hrReturnHighToNormal");
+                            alarmLog[currentBlockIndex] = false;
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start >= 121)
+                        {
+                            anim.Play("hrReturnVeryHighToHigh");
+                            alarmLog[currentBlockIndex] = false;
+                        }
+                        previousTrend = "decrease";
+                   
+                    }
+                    else if (HR1ExperimentSequence.hr1Block1Start == previousVital)
+                    {
+                        if (HR1ExperimentSequence.hr1Block1Start > 59 && HR1ExperimentSequence.hr1Block1Start < 100)
+                        {
+                            anim.Play("justMove");
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start >= 121)
+                        {
+                            anim.Play("hrStaticHighToVeryHigh");
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start <= 44)
+                        {
+                            anim.Play("hrStaticLowToVeryLow");
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start <= 59 && HR1ExperimentSequence.hr1Block1Start > 44)
+                        {
+                            if (previousTrend.Contains("increase"))
+                            {
+                                anim.Play("hrStaticVeryLowToLow");
+                            }
+                            else
+                            {
+                                anim.Play("hrStaticNormalToLow");
+                            }
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
+                        {
+                            if (previousTrend.Contains("decrease"))
+                            {
+                                anim.Play("hrStaticVeryHighToHigh");
+                            }
+                            else
+                            {
+                                anim.Play("hrStaticNormalToHigh");
+                            }
+                        }
                         alarmLog[currentBlockIndex] = false;
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start <= 44)
-                    {
-                        anim.Play("hrReturnVeryLowToLow");
-                        alarmLog[currentBlockIndex] = false;
-                    }
-                    previousTrend = "increase";
-                    LogTimestampOfAlarm();
 
+                    }
+                    currentValueIndex++;
+                    if (currentValueIndex >= currentBlock.vitalValue.Length)
+                    {
+                        currentValueIndex = 0;
+                        currentBlockIndex++;
+                    }
+                    textHr.text = "HR: " + HR1ExperimentSequence.hr1Block1Start;
+                    elapsedTimeNumber = 0f;
                 }
-                else if (currentBlock.vitalValue[currentValueIndex] < currentBlock.vitalValue[prevValue])
-                {
-                    if (HR1ExperimentSequence.hr1Block1Start <= 59 && HR1ExperimentSequence.hr1Block1Start > 44)
-                    {
-                        anim.Play("hrNormalToLow");
-                        if (!alarmLog[currentBlockIndex])
-                        {
-                            tcpObj.sendMessage("HR1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                            alarmLog[currentBlockIndex] = true;
-                        }
-
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start <= 44)
-                    {
-                        anim.Play("hrLowToVeryLow");
-                        if (!alarmLog[currentBlockIndex])
-                        {
-                            tcpObj.sendMessage("HR1, low to very low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                            alarmLog[currentBlockIndex] = true;
-                        }
-
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
-                    {
-                        anim.Play("hrReturnHighToNormal");
-                        alarmLog[currentBlockIndex] = false;
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start >= 121)
-                    {
-                        anim.Play("hrReturnVeryHighToHigh");
-                        alarmLog[currentBlockIndex] = false;
-                    }
-                    previousTrend = "decrease";
-                    LogTimestampOfAlarm();
-                }
-                else if (currentBlock.vitalValue[currentValueIndex] == currentBlock.vitalValue[prevValue])
-                {
-                    if (HR1ExperimentSequence.hr1Block1Start > 59 && HR1ExperimentSequence.hr1Block1Start < 100)
-                    {
-                        anim.Play("justMove");
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start >= 121)
-                    {
-                        anim.Play("hrStaticHighToVeryHigh");
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start <= 44)
-                    {
-                        anim.Play("hrStaticLowToVeryLow");
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start <= 59 && HR1ExperimentSequence.hr1Block1Start > 44)
-                    {
-                        if (previousTrend.Contains("increase"))
-                        {
-                            anim.Play("hrStaticVeryLowToLow");
-                        }
-                        else
-                        {
-                            anim.Play("hrStaticNormalToLow");
-                        }
-                    }
-                    else if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
-                    {
-                        if (previousTrend.Contains("decrease"))
-                        {
-                            anim.Play("hrStaticVeryHighToHigh");
-                        }
-                        else
-                        {
-                            anim.Play("hrStaticNormalToHigh");
-                        }
-                    }
-
-                }
-                textHr.text = "HR: " + HR1ExperimentSequence.hr1Block1Start;
                 elapsedTimeNumber += Time.deltaTime;
-            }
-            else
-            {
-                alarmLogged = false; // Reset the alarm flag for the next cycle
             }
         }
     }
