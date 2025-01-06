@@ -2,17 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block
-{
-    public string[] valueChange;
-    public float[] duration;
-
-    public Block(string[] valueChangeArray, float[] durationArray)
-    {
-        valueChange = valueChangeArray;
-        duration = durationArray;
-    }
-}
 
 public class Block1
 {
@@ -30,52 +19,79 @@ public static class HR1ExperimentSequence
     public static string stat = "static";
     public static int hr1Block1Start = 120;
 
+    //patient 1 block 1
     public static readonly Block1[] hrExperimentBlock1 =
     {
-        new Block1(new int[]{120,120,120,121,123,124,125,127,129,129,129,129,129,129,129,129,129,129,129,127}),
+        new Block1(new int[]{120,120,120,121,123,124,125,127,129,129,129,129,129,129,129,129,129,129,129,127}), //subblock1 of block 1 start hr-vh
         new Block1(new int[]{125,124,122,121,119,118,116,115,112,110,110,110,110,110,110,110,110,110,110,110}),
-        new Block1(new int[]{110,110,111,113,114,116,118,120,120,120,120,120,120,120,120,120,120,120,120,120}),
-        new Block1(new int[]{120,122,123,125,129,130,131,131,131,131,131,131,131,131,131,127,126,124,123,122}),
-        new Block1(new int[]{122,122,122,124,125,127,128,130,133,133,133,133,133,130,127,126,125,123,121,120}),
+        new Block1(new int[]{110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110}),     //probe1
+        new Block1(new int[]{110,110,111,113,114,116,118,120,120,120,120,120,120,120,120,120,120,120,120,120}),     //hr-h
+        new Block1(new int[]{120,122,123,125,129,130,131,131,131,131,131,131,131,131,131,127,126,124,123,122}), //subblock1 of block 1 end hr-vh
+        new Block1(new int[]{122,122,122,124,125,127,128,130,133,133,133,133,133,130,127,126,125,123,121,120}), //subblock2 of block1 start hr-vh
+        new Block1(new int[]{120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120}),     //probe2
         new Block1(new int[]{120,120,113,110,107,101,95,90,86,84,78,77,74,73,72,68,68,65,65,65}),
-        new Block1(new int[]{65,62,59,58,56,56,56,56,56,56,56,56,56,56,54,51,50,48,47,46}),
-        new Block1(new int[]{44,44,44,42,41,40,38,35,35,35,35,35,35,35,35,35,35,35,35,35}),
-        new Block1(new int[]{35,35,34,33,32,31,30,29,34,39,43,47,50,51,53,55,56,56,56,56}),
+        new Block1(new int[]{65,65,65,65,65,65,65,65,65,65,59,58,56,52,50,46,46,46,46,46}),                         //hr-l
+        new Block1(new int[]{46,46,44,42,41,40,38,35,35,35,35,35,35,35,35,35,35,35,35,35}),                     //subblock2 of block1 end hr-vl
+        new Block1(new int[]{35,35,34,33,32,31,30,29,34,39,43,47,50,51,53,55,56,56,56,56}),                     //subblock3 of block1 start hr-vl
         new Block1(new int[]{59,61,66,69,74,76,79,80,83,85,89,91,91,91,91,92,93,95,95,95}),
-        new Block1(new int[]{96,98,99,100,104,107,109,112,117,117,117,117,117,117,117,117,117,117,117,117}),
-        new Block1(new int[]{117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117}),
-        new Block1(new int[]{117,122,124,125,129,131,136,136,136,136,136,136,132,130,125,124,123,122,121,121}),
-        new Block1(new int[]{118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}), //with p2
+        new Block1(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}),                         //probe3
+        new Block1(new int[]{98,98,99,100,104,107,109,112,117,117,117,117,117,117,117,117,117,117,117,117}),        //hr-h
+        new Block1(new int[]{117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117}), //subblock3 of block1 end
+        new Block1(new int[]{117,122,124,125,129,131,136,136,136,136,136,136,132,130,125,124,123,122,121,121}), //subblock4 of block1 start hr-vh
+        new Block1(new int[]{118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}),     //with p2
         new Block1(new int[]{118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}),
-
+        new Block1(new int[]{118,118,122,124,125,129,131,136,136,136,136,136,136,132,130,125,124,123,122,118}),     //hr-vh
+        new Block1(new int[]{118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}), //subblock4 of block1 end probe4 
+        new Block1(new int[]{118,114,110,102,100,97,94,88,85,83,80,78,75,71,65,63,63,62,62,62}),                //subblock5 of block1 start
+        new Block1(new int[]{62,62,62,62,59,58,56,52,50,46,46,46,46,46,48,51,53,57,61,61}),                         //hr-l
+        new Block1(new int[]{61,61,61,61,61,59,58,56,52,50,46,46,46,46,46,48,51,53,57,63}),                         //hr-l
+        new Block1(new int[]{63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63}),                         //probe5
+        new Block1(new int[]{63,63,63,63,63,59,58,56,52,50,46,46,46,46,46,48,51,53,57,63}),                     //subblock5 of block1 end hr-l
+        new Block1(new int[]{63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63}),                     //subblock6 of block1 start
+        new Block1(new int[]{62,62,62,62,59,57,55,52,50,45,45,45,45,45,48,51,53,57,61,61}),                         //hr-l
+        new Block1(new int[]{67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67,67}),
+        new Block1(new int[]{67,67,67,67,67,67,67,67,64,62,62,57,54,51,50,48,47,47,47,47}),                         //hr-l
+        new Block1(new int[]{47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47}),                     //subblock6 of block1 end probe6
     };
 
-    public static readonly Block[] expSeqHr1 =
+    //patient 1 block 2
+    /*public static readonly Block1[] hrExperimentBlock1 =
     {
-        new Block(new string[]{stat,inc,stat }, new float[]{5f,6f,9f }),
-        new Block(new string[]{dec,stat }, new float[]{13f,7f }),
-        new Block(new string[]{inc,stat }, new float[]{6f, 14f }),
-        new Block(new string[]{inc, stat,dec }, new float[]{6f,9f,5f}),
-        new Block(new string[]{stat, inc,stat,dec }, new float[]{2f,6f,5f,7f}),
-        new Block(new string[]{dec }, new float[]{20f}),
-        new Block(new string[]{ stat,dec}, new float[]{}),
-        new Block(new string[]{ }, new float[]{ }),
-        new Block (new string[]{ }, new float[]{}),
-        new Block (new string[]{ }, new float[]{}),
-    };
+        new Block1(new int[]{116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116}), //subblock1 of block 2 start
+        new Block1(new int[]{116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116}),
+        new Block1(new int[]{116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116,116}),
+        new Block1(new int[]{116,116,116,121,123,124,125,127,129,129,129,129,129,129,129,129,129,129,129,127}),     //hr-vh
+        new Block1(new int[]{127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127,127}), //subblock1 of block 2 end probe1
+        new Block1(new int[]{123,122,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}), //subblock2 of block 2 start
+        new Block1(new int[]{118,118,118,118,118,122,123,125,129,130,131,131,131,131,131,131,127,126,124,120}),     // hr-vh
+        new Block1(new int[]{120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120,120}),     //probe2
+        new Block1(new int[]{120,120,113,110,107,101,95,90,86,84,83,83,83,83,83,83,83,83,83,83}),
+        new Block1(new int[]{83,83,83,83,83,83,83,83,83,83,78,77,74,73,72,68,68,65,65,65}),                     //subblock2 of block2 end
+        new Block1(new int[]{65,65,65,65,65,65,65,65,65,65,59,58,56,52,50,46,46,46,46,46}),                     //subblock3 of block2 start hr-l
+        new Block1(new int[]{46,46,46,46,44,42,41,40,38,35,35,35,35,35,35,35,35,35,35,35}),                         //hr-vl
+        new Block1(new int[]{35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35}),                         //probe3
+        new Block1(new int[]{35,35,38,40,45,47,50,53,56,58,59,62,62,62,62,64,64,64,64,64}),
+        new Block1(new int[]{64,64,64,64,64,59,57,52,50,48,45,45,45,45,45,45,45,45,45,45}),                     //subblock3 of block2 end hr-l
+        new Block1(new int[]{45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45,45}),                     //subblock4 of block2 start probe4
+        new Block1(new int[]{45,45,43,42,41,40,38,35,35,35,35,40,44,46,48,50,55,57,59,60}),                         //hr-vl
+        new Block1(new int[]{60,61,62,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63}),
+        new Block1(new int[]{62,62,62,62,59,58,56,52,50,46,46,46,46,46,48,51,53,57,61,61}),                         //hr-l
+        new Block1(new int[]{64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64}),                     //subblock4 of block2 end
+        new Block1(new int[]{64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64}),                     //subblock5 of block2 start
+        new Block1(new int[]{64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64}),                         //probe5
+        new Block1(new int[]{64,64,64,64,64,59,58,56,52,50,46,46,46,46,46,46,46,46,46,46}),                         //hr-l
+        new Block1(new int[]{46,46,46,43,42,41,40,38,35,35,35,35,40,44,46,46,46,46,46,46}),                         //hr-vl
+        new Block1(new int[]{46,46,46,46,48,50,52,57,64,68,70,76,80,85,90,96,99,99,99,99}),                     //subblock5 of block2 end
+        new Block1(new int[]{99,99,99,100,104,107,109,112,117,117,117,117,117,117,117,117,117,117,117,117}),    //subblock6 of block2 start hr-h
+        new Block1(new int[]{117,117,122,124,125,129,131,136,136,136,136,136,136,132,130,125,122,122,122,122}),     // hr-vh
+        new Block1(new int[]{122,122,122,122,122,124,125,126,127,128,129,125,121,119,119,119,119,119,119,119}),     // hr-vh
+        new Block1(new int[]{119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119}),     //probe6
+        new Block1(new int[]{119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119}), //subblock6 of block2 end
+        new Block1(new int[]{119,119,122,124,125,129,131,136,136,136,136,136,136,132,130,125,122,122,122,122}), //subblock7 of block2 start hr-vh
+        new Block1(new int[]{122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122}),
+        new Block1(new int[]{122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122,122}),     //probe7
+        new Block1(new int[]{122,122,125,127,128,129,131,136,136,136,136,136,136,132,130,125,122,122,122,122}),
+        new Block1(new int[]{122,115,110,104,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90})                  //subblock7 of block2 end
+    };*/
 
-    public static readonly Block[] expSeq = {
-        new Block(new string[]{stat,inc,stat,dec }, new float[]{4f,6f,4f,6f }),
-        new Block(new string[]{stat }, new float[]{20f }),
-        new Block(new string[]{inc, stat,dec,stat}, new float[]{6f,4f,6f,4f }),
-        new Block(new string[]{ dec, stat}, new float[]{4f,16f }),
-        new Block(new string[]{stat,inc,stat,dec }, new float[]{4f,6f,3f,6f }),
-        new Block(new string[]{stat }, new float[]{7f }),
-        new Block(new string[]{inc, stat,dec,stat}, new float[]{6f,2f,6f,3f }),
-        new Block(new string[]{ dec, stat}, new float[]{4f,13f }),
-        new Block(new string[]{stat,inc,stat,dec }, new float[]{4f,6f,4f,6f }),
-        new Block(new string[]{stat }, new float[]{20f }),
-        new Block(new string[]{inc, stat,dec,stat}, new float[]{6f,4f,6f,4f }),
-        new Block(new string[]{ dec, stat}, new float[]{4f,16f })
-    };
 }

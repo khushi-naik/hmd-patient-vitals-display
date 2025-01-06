@@ -24,6 +24,7 @@ public class hr2Behavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.speed = 0;
         if (CommonPrototypeVariables.isExperimentStarted)
         {
             animationTimer += Time.deltaTime;
@@ -35,8 +36,8 @@ public class hr2Behavior : MonoBehaviour
             }
             else
             {
-                Vector3 directionToCamera = (mainCamera.transform.position - transform.position).normalized;
-                transform.Translate(directionToCamera * speed * Time.deltaTime, Space.World);
+                //Vector3 directionToCamera = (mainCamera.transform.position - transform.position).normalized;
+                //transform.Translate(directionToCamera * speed * Time.deltaTime, Space.World);
 
                 //transform.Translate(0, 0, speed * Time.deltaTime, Space.World);
                 //transform.Translate(-Vector3.forward * speed *Time.deltaTime, Space.World);

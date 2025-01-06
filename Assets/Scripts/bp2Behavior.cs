@@ -24,6 +24,7 @@ public class bp2Behavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.speed = 0;
         if (CommonPrototypeVariables.isExperimentStarted)
         {
             //Vector3 edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.95f, 0.3f, 1.5f));
@@ -36,8 +37,8 @@ public class bp2Behavior : MonoBehaviour
             }
             else
             {
-                Vector3 directionToCamera = (mainCamera.transform.position - transform.position).normalized;
-                transform.Translate(directionToCamera * speed * Time.deltaTime, Space.World);
+                //Vector3 directionToCamera = (mainCamera.transform.position - transform.position).normalized;
+                //transform.Translate(directionToCamera * speed * Time.deltaTime, Space.World);
 
             }
             //Debug.Log("Position of bp2 sphere: " + transform.position.x + " " + transform.position.y + " " + transform.position.z);

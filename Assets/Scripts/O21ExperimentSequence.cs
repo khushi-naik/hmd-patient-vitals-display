@@ -2,17 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class O21Block
-{
-    public string[] valueChange;
-    public float[] duration;
-
-    public O21Block(string[] valueChangeArray, float[] durationArray)
-    {
-        valueChange = valueChangeArray;
-        duration = durationArray;
-    }
-}
 
 public class O2Block1
 {
@@ -28,40 +17,80 @@ public static class O21ExperimentSequence
     public static string inc = "increase";
     public static string dec = "decrease";
     public static string stat = "static";
-    public static int o21Block1Start = 89;
+    public static int o21Block1Start = 96;
 
+    //patient 1 block 1
     public static readonly O2Block1[] o2ExperimentBlock1 =
     {
-        new O2Block1(new int[]{120,120,120,121,123,124,125,127,129,129,129,129,129,129,129,129,129,129,129,127}),
-        new O2Block1(new int[]{125,124,122,121,119,118,116,115,112,110,110,110,110,110,110,110,110,110,110,110}),
-        new O2Block1(new int[]{110,110,111,113,114,116,118,120,120,120,120,120,120,120,120,120,120,120,120,120}),
-        new O2Block1(new int[]{120,122,123,125,129,130,131,131,131,131,131,131,131,131,131,127,126,124,123,122}),
-        new O2Block1(new int[]{122,122,122,124,125,127,128,130,133,133,133,133,133,130,127,126,125,123,121,120}),
-        new O2Block1(new int[]{120,120,113,117,107,101,95,90,86,84,78,77,74,73,72,68,68,65,65,65}),
-        new O2Block1(new int[]{65,62,59,58,56,56,56,56,56,56,56,56,56,56,54,51,50,48,47,46}),
-        new O2Block1(new int[]{46,45,44,42,41,40,38,35,35,35,35,35,35,35,35,35,35,35,35,35}),
-        new O2Block1(new int[]{35,35,34,33,32,31,30,29,34,39,43,47,50,51,53,55,56,56,56,56}),
-        new O2Block1(new int[]{59,61,66,69,74,76,79,80,83,85,89,91,91,91,91,92,93,95,95,95}),
-        new O2Block1(new int[]{96,98,99,100,104,107,109,112,117,117,117,117,117,117,117,117,117,117,117,117}),
-        new O2Block1(new int[]{117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117,117}),
-        new O2Block1(new int[]{117,122,124,125,129,131,136,136,136,136,136,136,132,130,125,124,123,122,121,121}),
-        new O2Block1(new int[]{118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}), //with p2
-        new O2Block1(new int[]{118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118,118}),
-
+        new O2Block1(new int[]{96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96}), //subblock1 of block 1 start
+        new O2Block1(new int[]{96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}),     //probe1 
+        new O2Block1(new int[]{91,92,93,94,95,96,97,97,97,97,97,97,97,96,96,96,96,96,96,96}),
+        new O2Block1(new int[]{96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90}), //o2-l subblock1 of block 1 end
+        new O2Block1(new int[]{90,90,90,88,87,85,84,82,80,80,80,80,80,80,80,82,82,84,84,84}), //o2-vl subblock2 of block1 start
+        new O2Block1(new int[]{84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84}),     //probe2
+        new O2Block1(new int[]{86,86,89,89,89,90,91,93,93,93,94,95,96,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}), //subblock2 of block1 end
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}), //subblock3 of block1 start
+        new O2Block1(new int[]{90,90,90,88,87,86,85,83,81,81,81,81,81,81,83,85,85,88,89,89}),     //o2-vl
+        new O2Block1(new int[]{89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89}),     //probe3
+        new O2Block1(new int[]{89,89,89,89,89,89,92,92,92,93,94,95,96,96,96,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}), //subblock3 of block1 end
+        new O2Block1(new int[]{97,96,96,95,94,93,92,91,90,90,90,94,95,96,96,96,97,97,97,97}), //o2-l subblock4 of block1 start
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,96,95,94,93,92,91,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,87,86,85,83,82,79,82,82,82,82,82,85,87,88,89,89}),     //o2-vl
+        new O2Block1(new int[]{90,94,95,96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}), //probe4 subblock4 of block1 end
+        new O2Block1(new int[]{90,90,90,90,88,86,84,83,82,81,81,81,81,81,81,81,85,86,87,89}), //o2-vl subblock5 of block1 start
+        new O2Block1(new int[]{90,92,93,94,95,96,96,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}),     //probe5
+        new O2Block1(new int[]{90,90,90,90,90,88,87,86,85,84,83,83,83,83,83,83,83,83,83,83}), //o2-vl subblock5 of block1 end
+        new O2Block1(new int[]{85,86,87,88,90,92,93,93,93,93,93,93,93,93,93,93,93,93,93,93}), //subblock6 of block1 start
+        new O2Block1(new int[]{93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93}),
+        new O2Block1(new int[]{93,93,93,89,88,86,85,84,82,82,82,82,82,82,82,82,82,82,82,82}),     //o2-vl
+        new O2Block1(new int[]{82,85,86,88,89,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93}),
+        new O2Block1(new int[]{93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93}) //probe6 subblock6 of block1 end
     };
 
-    public static readonly O21Block[] expSeq = {
-        new O21Block(new string[]{stat,inc,stat,dec }, new float[]{4f,6f,4f,6f }),
-        new O21Block(new string[]{stat }, new float[]{20f }),
-        new O21Block(new string[]{inc, stat,dec,stat}, new float[]{6f,4f,6f,4f }),
-        new O21Block(new string[]{ dec, stat}, new float[]{4f,16f }),
-        new O21Block(new string[]{stat,inc,stat,dec }, new float[]{4f,6f,3f,6f }),
-        new O21Block(new string[]{stat }, new float[]{7f }),
-        new O21Block(new string[]{inc, stat,dec,stat}, new float[]{6f,2f,6f,3f }),
-        new O21Block(new string[]{ dec, stat}, new float[]{4f,13f }),
-        new O21Block(new string[]{stat,inc,stat,dec }, new float[]{4f,6f,4f,6f }),
-        new O21Block(new string[]{stat }, new float[]{20f }),
-        new O21Block(new string[]{inc, stat,dec,stat}, new float[]{6f,4f,6f,4f }),
-        new O21Block(new string[]{ dec, stat}, new float[]{4f,16f })
-    };
+    //patient 1 block 2
+    /*public static readonly O2Block1[] o2ExperimentBlock1 =
+    {
+        new O2Block1(new int[]{93,93,93,93,93,93,93,89,88,87,86,85,84,84,84,84,87,89,90,90}), //o2-vl subblock1 of block 2 start
+        new O2Block1(new int[]{91,92,93,95,96,96,96,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,96,95,94,93,92,91,90,90,90,90,90,90,90,90}),     //o2-l 
+        new O2Block1(new int[]{91,92,93,94,95,96,97,97,97,97,97,97,97,96,96,96,96,96,96,96}),
+        new O2Block1(new int[]{96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96}), //probe1 subblock1 of block 2 end
+        new O2Block1(new int[]{96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90}), //o2-l subblock2 of block2 start
+        new O2Block1(new int[]{90,90,90,88,87,85,84,82,80,80,80,80,80,80,82,84,86,87,88,89}),     //o2-vl
+        new O2Block1(new int[]{89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89}),     //probe2
+        new O2Block1(new int[]{89,89,89,89,89,87,85,84,83,82,81,81,81,84,84,84,86,87,88,89}),     //o2-vl
+        new O2Block1(new int[]{89,89,89,89,88,86,85,84,83,82,82,82,82,82,82,82,82,82,82,82}), //o2-vl subblock2 of block2 end
+        new O2Block1(new int[]{82,82,87,89,91,92,94,95,96,97,97,97,97,97,97,97,97,97,97,97}), //subblock3 of block2 start    
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),     //probe3
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,95,94,93,92,91,90,90,90,90,91,94,95,97,97,97,97,97,97}), //o2-l subblock3 of block2 end
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}), //probe4 subblock4 of block2 start
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,96,95,94,93,92,91,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,91,92,93,94,95,97,97,97,97,97,97,97,97,97,97,97}), //subblock4 of block2 end
+        new O2Block1(new int[]{97,97,97,96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90}), //o2-l subblock5 of block2 start
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}),      //probe5 
+        new O2Block1(new int[]{90,90,90,90,90,88,86,84,83,82,81,81,81,81,81,81,85,86,87,89}),      //o2-vl
+        new O2Block1(new int[]{89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89}),
+        new O2Block1(new int[]{90,92,93,94,95,96,96,97,97,97,97,97,97,97,97,97,97,97,97,97}), //subblock5 of block2 end
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}), //subblock6 of block2 start
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90}),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}),     //probe6
+        new O2Block1(new int[]{90,90,90,90,90,92,93,95,96,96,97,97,97,97,97,97,97,97,97,97}), //subblock6 of block2 end
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}), //subblock7 of block2 start
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),     //o2-vl
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}),
+        new O2Block1(new int[]{97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97}) //subblock7 of block2 end
+    };*/
 }

@@ -17,7 +17,7 @@ public class hrBehavior : MonoBehaviour
     public TextMeshProUGUI textHr;
     private float updateTime = 1f;
     private float elapsedTimeNumber = 0f;
-    Block[] testArray;
+    //Block[] testArray;
     int currentBlockIndex = 0;
     int currentValueIndex = 0;
     private string previousTrend = "";
@@ -33,7 +33,7 @@ public class hrBehavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        testArray = HR1ExperimentSequence.expSeq;
+        //testArray = HR1ExperimentSequence.expSeq;
         expArray = HR1ExperimentSequence.hrExperimentBlock1;
         textHr.enabled = false;
 
@@ -94,7 +94,7 @@ public class hrBehavior : MonoBehaviour
                             anim.Play("hrNormalToHigh");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                tcpObj.sendMessage("HR1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("HR1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
 
@@ -104,10 +104,15 @@ public class hrBehavior : MonoBehaviour
                             anim.Play("hrHighToVeryHigh");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                tcpObj.sendMessage("HR1, high to very high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("HR1, high to very high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
 
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start > 59 && HR1ExperimentSequence.hr1Block1Start < 100)
+                        {
+                            anim.Play("justMove");
+                            alarmLog[currentBlockIndex] = false;
                         }
                         else if (HR1ExperimentSequence.hr1Block1Start > 44 && HR1ExperimentSequence.hr1Block1Start <= 59)
                         {
@@ -129,7 +134,7 @@ public class hrBehavior : MonoBehaviour
                             anim.Play("hrNormalToLow");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                tcpObj.sendMessage("HR1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("HR1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
 
@@ -139,10 +144,15 @@ public class hrBehavior : MonoBehaviour
                             anim.Play("hrLowToVeryLow");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                tcpObj.sendMessage("HR1, low to very low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + prevValue + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("HR1, low to very low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
 
+                        }
+                        else if (HR1ExperimentSequence.hr1Block1Start > 59 && HR1ExperimentSequence.hr1Block1Start < 100)
+                        {
+                            anim.Play("justMove");
+                            alarmLog[currentBlockIndex] = false;
                         }
                         else if (HR1ExperimentSequence.hr1Block1Start >= 100 && HR1ExperimentSequence.hr1Block1Start < 121)
                         {
@@ -211,12 +221,12 @@ public class hrBehavior : MonoBehaviour
     }
 
 
-    void LogTimestampOfAlarm()
+    /*void LogTimestampOfAlarm()
     {
         if (!alarmLogged)
         {
             string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            Block item = testArray[currentBlockIndex];
+            //Block item = testArray[currentBlockIndex];
             Debug.Log("Alarm triggered at: " + timestamp);
             alarmLogged = true;
 
@@ -231,6 +241,6 @@ public class hrBehavior : MonoBehaviour
             }
 
         }
-    }
+    }*/
 
 }

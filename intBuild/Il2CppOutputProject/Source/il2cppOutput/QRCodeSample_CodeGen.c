@@ -12,7 +12,6 @@
 
 
 
-extern void Bp1Block__ctor_m41449A90B75F0DA20C231B91DBA8E8727DD284B2 (void);
 extern void BpBlock1__ctor_mAA3E43740BD7ADB99390628B05333725DC2EFAB0 (void);
 extern void Bp1ExperimentSequence__ctor_m0985E15CB8A29892E6CE111B27874200F2BA5CE9 (void);
 extern void Bp1ExperimentSequence__cctor_m390816DF6D30EE331BC17C326C6E7E6257034591 (void);
@@ -35,7 +34,6 @@ extern void DwellBehavior__ctor_m90549C472789DE0F12CE3B254A789D77BFC27A44 (void)
 extern void EdgeCube_Start_m77B8D7A09506B431EA260CD04A4E29699CEEE682 (void);
 extern void EdgeCube_Update_m5E729909B122865962089C0CDC4BA0AE21F0DADD (void);
 extern void EdgeCube__ctor_m1CCD546B7ACE9873AE1494CACB38E8D6F65ECFA7 (void);
-extern void Block__ctor_m0D884D2A32202106AEE97EB63EEF2E72E30FA927 (void);
 extern void Block1__ctor_mD843F9F1583161BF4441CFD5F064D7823F55988A (void);
 extern void HR1ExperimentSequence__cctor_m7A4B8423D0F4D790C57200E4BB7F5FB4E8CDA1F0 (void);
 extern void hr2Behavior_Start_mC013688A6632F2CF1DD8C4AA973765F80981E9F6 (void);
@@ -45,7 +43,6 @@ extern void HrBlock2__ctor_m478B77FF4B5F58F9365E8E27D001BA565005B365 (void);
 extern void HR2ExperimentSequence__cctor_m8B53F72576A4FE60B225693D204C4723F26E2CA1 (void);
 extern void hrBehavior_Start_m6C8F42C7D77F7EA4E3238764AA42C530B8122B63 (void);
 extern void hrBehavior_Update_m4C5A78E7C33EA83114A892A2ADB6C531D26EF3DA (void);
-extern void hrBehavior_LogTimestampOfAlarm_m6BF05CAAE3651174F5B79CD6B76D01830A4C641E (void);
 extern void hrBehavior__ctor_m452B6F5649548975654F276AAA44850760DB031A (void);
 extern void InitailizeXRBecauseUnityIsADumbPieceOfShit_Start_mB1872D4C77A9EF64BC3B5FD7AACC8DEDCECF50D8 (void);
 extern void InitailizeXRBecauseUnityIsADumbPieceOfShit_StartXRRoutine_m9E91A02C11B056970FF1602DDDE36811373AC78A (void);
@@ -56,7 +53,6 @@ extern void U3CStartXRRoutineU3Ed__1_MoveNext_m4A592C25BCC7026A2D12E636BDD843349
 extern void U3CStartXRRoutineU3Ed__1_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE04CEAEBE6DF45670CEAFE6B6F0B02E3D519198D (void);
 extern void U3CStartXRRoutineU3Ed__1_System_Collections_IEnumerator_Reset_m91A916D2F784E5CB26D0DAFBE1332EEBAF3CDC5A (void);
 extern void U3CStartXRRoutineU3Ed__1_System_Collections_IEnumerator_get_Current_mA16371E84140826C15F507BBFFC473FC93217E96 (void);
-extern void O21Block__ctor_mC53CF54A943B6A22CE219F6340108394F053ACCA (void);
 extern void O2Block1__ctor_mC7833387FF522FB33CD9D9F4556B6BDA4826EDBA (void);
 extern void O21ExperimentSequence__cctor_m65F8703406FB8F7F7EFC45AEAEA9D3BF1C84C495 (void);
 extern void O2Block2__ctor_m344B5EE2FF3B24A35EE2F40FAB27C56B12E3E778 (void);
@@ -171,9 +167,8 @@ extern void FollowEyeGaze_OnDisable_mA3B2CED1B7C4F144109354803C847B7F3501E374 (v
 extern void FollowEyeGaze_Update_mF5B9741EB929BEB2000753D196C111037C8C9BF2 (void);
 extern void FollowEyeGaze_FollowEyeGazeAction_m9E68E99FA7743C4118516843948DB4C7938766B5 (void);
 extern void FollowEyeGaze__ctor_m471553EFC9573FF6357FDEC1302F008B88D8AA5C (void);
-static Il2CppMethodPointer s_methodPointers[168] = 
+static Il2CppMethodPointer s_methodPointers[164] = 
 {
-	Bp1Block__ctor_m41449A90B75F0DA20C231B91DBA8E8727DD284B2,
 	BpBlock1__ctor_mAA3E43740BD7ADB99390628B05333725DC2EFAB0,
 	Bp1ExperimentSequence__ctor_m0985E15CB8A29892E6CE111B27874200F2BA5CE9,
 	Bp1ExperimentSequence__cctor_m390816DF6D30EE331BC17C326C6E7E6257034591,
@@ -196,7 +191,6 @@ static Il2CppMethodPointer s_methodPointers[168] =
 	EdgeCube_Start_m77B8D7A09506B431EA260CD04A4E29699CEEE682,
 	EdgeCube_Update_m5E729909B122865962089C0CDC4BA0AE21F0DADD,
 	EdgeCube__ctor_m1CCD546B7ACE9873AE1494CACB38E8D6F65ECFA7,
-	Block__ctor_m0D884D2A32202106AEE97EB63EEF2E72E30FA927,
 	Block1__ctor_mD843F9F1583161BF4441CFD5F064D7823F55988A,
 	HR1ExperimentSequence__cctor_m7A4B8423D0F4D790C57200E4BB7F5FB4E8CDA1F0,
 	hr2Behavior_Start_mC013688A6632F2CF1DD8C4AA973765F80981E9F6,
@@ -206,7 +200,6 @@ static Il2CppMethodPointer s_methodPointers[168] =
 	HR2ExperimentSequence__cctor_m8B53F72576A4FE60B225693D204C4723F26E2CA1,
 	hrBehavior_Start_m6C8F42C7D77F7EA4E3238764AA42C530B8122B63,
 	hrBehavior_Update_m4C5A78E7C33EA83114A892A2ADB6C531D26EF3DA,
-	hrBehavior_LogTimestampOfAlarm_m6BF05CAAE3651174F5B79CD6B76D01830A4C641E,
 	hrBehavior__ctor_m452B6F5649548975654F276AAA44850760DB031A,
 	InitailizeXRBecauseUnityIsADumbPieceOfShit_Start_mB1872D4C77A9EF64BC3B5FD7AACC8DEDCECF50D8,
 	InitailizeXRBecauseUnityIsADumbPieceOfShit_StartXRRoutine_m9E91A02C11B056970FF1602DDDE36811373AC78A,
@@ -217,7 +210,6 @@ static Il2CppMethodPointer s_methodPointers[168] =
 	U3CStartXRRoutineU3Ed__1_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE04CEAEBE6DF45670CEAFE6B6F0B02E3D519198D,
 	U3CStartXRRoutineU3Ed__1_System_Collections_IEnumerator_Reset_m91A916D2F784E5CB26D0DAFBE1332EEBAF3CDC5A,
 	U3CStartXRRoutineU3Ed__1_System_Collections_IEnumerator_get_Current_mA16371E84140826C15F507BBFFC473FC93217E96,
-	O21Block__ctor_mC53CF54A943B6A22CE219F6340108394F053ACCA,
 	O2Block1__ctor_mC7833387FF522FB33CD9D9F4556B6BDA4826EDBA,
 	O21ExperimentSequence__cctor_m65F8703406FB8F7F7EFC45AEAEA9D3BF1C84C495,
 	O2Block2__ctor_m344B5EE2FF3B24A35EE2F40FAB27C56B12E3E778,
@@ -347,13 +339,12 @@ extern void U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACB
 extern void ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] = 
 {
-	{ 0x06000084, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
-	{ 0x06000085, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
-	{ 0x06000092, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
+	{ 0x06000080, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
+	{ 0x06000081, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
+	{ 0x0600008E, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[168] = 
+static const int32_t s_InvokerIndices[164] = 
 {
-	3822,
 	6988,
 	8866,
 	13184,
@@ -376,7 +367,6 @@ static const int32_t s_InvokerIndices[168] =
 	8866,
 	8866,
 	8866,
-	3822,
 	6988,
 	13184,
 	8866,
@@ -384,7 +374,6 @@ static const int32_t s_InvokerIndices[168] =
 	8866,
 	6988,
 	13184,
-	8866,
 	8866,
 	8866,
 	8866,
@@ -397,7 +386,6 @@ static const int32_t s_InvokerIndices[168] =
 	8721,
 	8866,
 	8721,
-	3822,
 	6988,
 	13184,
 	6988,
@@ -524,9 +512,9 @@ static const int32_t s_InvokerIndices[168] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x02000029, { 3, 3 } },
-	{ 0x02000030, { 6, 5 } },
-	{ 0x06000067, { 0, 3 } },
+	{ 0x02000026, { 3, 3 } },
+	{ 0x0200002D, { 6, 5 } },
+	{ 0x06000063, { 0, 3 } },
 };
 extern const uint32_t g_rgctx_TData_t839F02FA7777FEF1BD27577E8384BD4EC15A2872;
 extern const uint32_t g_rgctx_QRCodeEventArgs_1_t169DE04BB5A9946810D16142DDF514F1C813FA0D;
@@ -557,7 +545,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule;
 const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule = 
 {
 	"QRCodeSample.dll",
-	168,
+	164,
 	s_methodPointers,
 	3,
 	s_adjustorThunks,
