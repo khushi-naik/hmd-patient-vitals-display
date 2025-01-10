@@ -8,7 +8,14 @@ using TMPro;
 public class StartExperimentSceneScript : MonoBehaviour
 {
     public TextMeshProUGUI testing;
+    public TextMeshProUGUI probeAlertText;
     private Coroutine experimentCountdownCoroutine;
+
+    void Start()
+    {
+        probeAlertText.enabled = false; //keep alert hidden till a probe occurs
+    }
+
     public void OnSelectEntered(SelectEnterEventArgs _)
     {
         testing.text = "started";

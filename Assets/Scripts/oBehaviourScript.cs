@@ -10,6 +10,7 @@ public class oBehaviourScript : MonoBehaviour
     private Animator anim;
     private float elapsedTime = 0f;
     public TextMeshProUGUI textO2;
+    public TextMeshProUGUI probeAlertText;
     private float updateTime = 1f;
     private float elapsedTimeNumber = 0f;
     //O21Block[] testArray;
@@ -40,9 +41,18 @@ public class oBehaviourScript : MonoBehaviour
     {
         if (CommonPrototypeVariables.isExperimentStarted)
         {
-            O2Block1 currentBlock = expArray[currentBlockIndex];
+            
             if (currentBlockIndex < expArray.Length)
             {
+                O2Block1 currentBlock = expArray[currentBlockIndex];
+                if (currentBlock.isProbe)
+                {
+                    probeAlertText.enabled = true;
+                }
+                else
+                {
+                    probeAlertText.enabled = false;
+                }
                 if (elapsedTimeNumber >= updateTime)
                 {
                     int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];

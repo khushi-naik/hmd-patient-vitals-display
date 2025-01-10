@@ -6,9 +6,11 @@ using UnityEngine;
 public class O2Block1
 {
     public int[] vitalValue;
-    public O2Block1(int[] vitalValues)
+    public bool isProbe;
+    public O2Block1(int[] vitalValues, bool isProbeValue)
     {
         this.vitalValue = vitalValues;
+        this.isProbe = isProbeValue;
     }
 }
 
@@ -22,17 +24,17 @@ public static class O21ExperimentSequence
     //patient 1 block 1
     public static readonly O2Block1[] o2ExperimentBlock1 =
     {
-        new O2Block1(new int[]{96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96}), //subblock1 of block 1 start
-        new O2Block1(new int[]{96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90,90,90}),     //o2-l
-        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}),     //probe1 
-        new O2Block1(new int[]{91,92,93,94,95,96,97,97,97,97,97,97,97,96,96,96,96,96,96,96}),
-        new O2Block1(new int[]{96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90}), //o2-l subblock1 of block 1 end
-        new O2Block1(new int[]{90,90,90,88,87,85,84,82,80,80,80,80,80,80,80,82,82,84,84,84}), //o2-vl subblock2 of block1 start
-        new O2Block1(new int[]{84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84}),     //probe2
-        new O2Block1(new int[]{86,86,89,89,89,90,91,93,93,93,94,95,96,97,97,97,97,97,97,97}),
-        new O2Block1(new int[]{97,97,97,97,97,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90}),     //o2-l
-        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}), //subblock2 of block1 end
-        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}), //subblock3 of block1 start
+        new O2Block1(new int[]{96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96},false), //subblock1 of block 1 start
+        new O2Block1(new int[]{96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90,90,90},false),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90},true),     //probe1 
+        new O2Block1(new int[]{91,92,93,94,95,96,97,97,97,97,97,97,97,96,96,96,96,96,96,96},false),
+        new O2Block1(new int[]{96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90},false), //o2-l subblock1 of block 1 end
+        new O2Block1(new int[]{90,90,90,88,87,85,84,82,80,80,80,80,80,80,80,82,82,84,84,84},false), //o2-vl subblock2 of block1 start
+        new O2Block1(new int[]{84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84},true),     //probe2
+        new O2Block1(new int[]{86,86,89,89,89,90,91,93,93,93,94,95,96,97,97,97,97,97,97,97},false),
+        new O2Block1(new int[]{97,97,97,97,97,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90},false),     //o2-l
+        new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90},false)//, //subblock2 of block1 end
+        /*new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90}), //subblock3 of block1 start
         new O2Block1(new int[]{90,90,90,88,87,86,85,83,81,81,81,81,81,81,83,85,85,88,89,89}),     //o2-vl
         new O2Block1(new int[]{89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89}),     //probe3
         new O2Block1(new int[]{89,89,89,89,89,89,92,92,92,93,94,95,96,96,96,97,97,97,97,97}),
@@ -51,7 +53,7 @@ public static class O21ExperimentSequence
         new O2Block1(new int[]{93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93}),
         new O2Block1(new int[]{93,93,93,89,88,86,85,84,82,82,82,82,82,82,82,82,82,82,82,82}),     //o2-vl
         new O2Block1(new int[]{82,85,86,88,89,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93}),
-        new O2Block1(new int[]{93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93}) //probe6 subblock6 of block1 end
+        new O2Block1(new int[]{93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93,93})*/ //probe6 subblock6 of block1 end
     };
 
     //patient 1 block 2

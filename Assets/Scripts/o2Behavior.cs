@@ -20,6 +20,8 @@ public class o2Behavior : MonoBehaviour
     private bool[] alarmLog;
     private TcpConnectionScript tcpObj;
 
+    //private startPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class o2Behavior : MonoBehaviour
         }
         edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.6f, 0.4f, 1f));
         transform.position = edgePosition;
+        //startPosition = 
 
         alarmLog = new bool[expArray.Length];
         GameObject obj = GameObject.Find("testTCP");
@@ -96,7 +99,10 @@ public class o2Behavior : MonoBehaviour
                 else
                 {
                     Vector3 directionToCamera = (mainCamera.transform.position - transform.position).normalized;
-                    
+                    //Vector3 currentPosition = transform.position;
+                    //float newZ = Mathf.Lerp(startPosition.z, targetPosition.z, moveProgress);
+                    //transform.position = new Vector3(currentPosition.x, currentPosition.y, newZ);
+
                     if (animType.Equals("lowAnim"))
                     {
                         anim.speed = 0.5f;
