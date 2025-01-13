@@ -28,7 +28,7 @@ public static class O21ExperimentSequence
         new O2Block1(new int[]{96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90,90,90},false),     //o2-l
         new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90},true),     //probe1 
         new O2Block1(new int[]{91,92,93,94,95,96,97,97,97,97,97,97,97,96,96,96,96,96,96,96},false),
-        new O2Block1(new int[]{96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90},false), //o2-l subblock1 of block 1 end
+        new O2Block1(new int[]{96,96,96,96,96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90},true), //o2-l subblock1 of block 1 end
         new O2Block1(new int[]{90,90,90,88,87,85,84,82,80,80,80,80,80,80,80,82,82,84,84,84},false), //o2-vl subblock2 of block1 start
         new O2Block1(new int[]{84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84,84},true),     //probe2
         new O2Block1(new int[]{86,86,89,89,89,90,91,93,93,93,94,95,96,97,97,97,97,97,97,97},false),

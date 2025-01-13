@@ -63,6 +63,9 @@ extern void o2Behavior__ctor_m607F19C632A8DD0EC4A1DE2558855C994EF25791 (void);
 extern void oBehaviourScript_Start_m96FBD0116B3433A4D54E5E2A3B433EA218C7D0F1 (void);
 extern void oBehaviourScript_Update_mF6E30BB7BB053894757FE958B6E94A6231832E9F (void);
 extern void oBehaviourScript__ctor_mEE9206D662D9DD058973D4EBF564BB886621EA6A (void);
+extern void OTestBehavior_Start_mDA373800EC2705CB8918CA5FD5DB8EE5364B474D (void);
+extern void OTestBehavior_Update_m094038DD2CB8FB7FC2C45BC5F4A3076C20E40D41 (void);
+extern void OTestBehavior__ctor_m53651330368394FB02565857579867A01045F605 (void);
 extern void CSVReader_Start_m1937BF6DD23593B1580C291F8DEBF28FC3BB732D (void);
 extern void CSVReader_ReadCSV_m4E79ABBEEF8A2619637C679173A794700F1D762A (void);
 extern void CSVReader__ctor_mCD49B642B8AC1AF365C94E1444533D53A3DA4FC1 (void);
@@ -168,7 +171,7 @@ extern void FollowEyeGaze_OnDisable_mA3B2CED1B7C4F144109354803C847B7F3501E374 (v
 extern void FollowEyeGaze_Update_mF5B9741EB929BEB2000753D196C111037C8C9BF2 (void);
 extern void FollowEyeGaze_FollowEyeGazeAction_m9E68E99FA7743C4118516843948DB4C7938766B5 (void);
 extern void FollowEyeGaze__ctor_m471553EFC9573FF6357FDEC1302F008B88D8AA5C (void);
-static Il2CppMethodPointer s_methodPointers[165] = 
+static Il2CppMethodPointer s_methodPointers[168] = 
 {
 	BpBlock1__ctor_mAA3E43740BD7ADB99390628B05333725DC2EFAB0,
 	Bp1ExperimentSequence__ctor_m0985E15CB8A29892E6CE111B27874200F2BA5CE9,
@@ -221,6 +224,9 @@ static Il2CppMethodPointer s_methodPointers[165] =
 	oBehaviourScript_Start_m96FBD0116B3433A4D54E5E2A3B433EA218C7D0F1,
 	oBehaviourScript_Update_mF6E30BB7BB053894757FE958B6E94A6231832E9F,
 	oBehaviourScript__ctor_mEE9206D662D9DD058973D4EBF564BB886621EA6A,
+	OTestBehavior_Start_mDA373800EC2705CB8918CA5FD5DB8EE5364B474D,
+	OTestBehavior_Update_m094038DD2CB8FB7FC2C45BC5F4A3076C20E40D41,
+	OTestBehavior__ctor_m53651330368394FB02565857579867A01045F605,
 	CSVReader_Start_m1937BF6DD23593B1580C291F8DEBF28FC3BB732D,
 	CSVReader_ReadCSV_m4E79ABBEEF8A2619637C679173A794700F1D762A,
 	CSVReader__ctor_mCD49B642B8AC1AF365C94E1444533D53A3DA4FC1,
@@ -341,11 +347,11 @@ extern void U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACB
 extern void ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] = 
 {
-	{ 0x06000081, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
-	{ 0x06000082, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
-	{ 0x0600008F, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
+	{ 0x06000084, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
+	{ 0x06000085, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
+	{ 0x06000092, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[165] = 
+static const int32_t s_InvokerIndices[168] = 
 {
 	6988,
 	8866,
@@ -392,6 +398,9 @@ static const int32_t s_InvokerIndices[165] =
 	13184,
 	6988,
 	13184,
+	8866,
+	8866,
+	8866,
 	8866,
 	8866,
 	8866,
@@ -515,9 +524,9 @@ static const int32_t s_InvokerIndices[165] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x02000026, { 3, 3 } },
-	{ 0x0200002D, { 6, 5 } },
-	{ 0x06000064, { 0, 3 } },
+	{ 0x02000027, { 3, 3 } },
+	{ 0x0200002E, { 6, 5 } },
+	{ 0x06000067, { 0, 3 } },
 };
 extern const uint32_t g_rgctx_TData_t839F02FA7777FEF1BD27577E8384BD4EC15A2872;
 extern const uint32_t g_rgctx_QRCodeEventArgs_1_t169DE04BB5A9946810D16142DDF514F1C813FA0D;
@@ -548,7 +557,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule;
 const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule = 
 {
 	"QRCodeSample.dll",
-	165,
+	168,
 	s_methodPointers,
 	3,
 	s_adjustorThunks,

@@ -25,13 +25,14 @@ public class o2Behavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Started");
         anim = GetComponent<Animator>();
         expArray = O22ExperimentSequence.O2ExperimentBlock2;
         if (mainCamera == null)
         {
             mainCamera = Camera.main;
         }
-        edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.6f, 0.4f, 1f));
+        edgePosition = mainCamera.ViewportToWorldPoint(new Vector3(0.9f, 0.4f, 1f));
         transform.position = edgePosition;
         //startPosition = 
 
@@ -55,7 +56,7 @@ public class o2Behavior : MonoBehaviour
                 {
                     anim.speed = 0;
                     animType = "";
-                    transform.position = mainCamera.ViewportToWorldPoint(new Vector3(0.6f, 0.4f, 1f));
+                    transform.position = mainCamera.ViewportToWorldPoint(new Vector3(0.9f, 0.4f, 1f));
                     int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     int currentVital = currentBlock.vitalValue[currentValueIndex];
                     if (currentVital > previousVital)
@@ -66,13 +67,13 @@ public class o2Behavior : MonoBehaviour
                     {
                         if (currentVital >= 90 && currentVital <= 95)
                         {
-                            
+
                             //anim.Play("o2NormalToLow");//change
                             if (!alarmLog[currentBlockIndex])
                             {
                                 tcpObj.sendMessage("O22, normal to low_blockno" + currentBlockIndex + "_curval" + currentVital + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
-                                
+
                             }
                             animType = "lowAnim";
 
@@ -93,7 +94,7 @@ public class o2Behavior : MonoBehaviour
                         currentValueIndex = 0;
                         currentBlockIndex++;
                     }
-                    
+
                     elapsedTimeNumber = 0f;
                 }
                 else
@@ -109,7 +110,7 @@ public class o2Behavior : MonoBehaviour
                         anim.Play("o2NormalToLow");
                         transform.Translate(-directionToCamera * speed * Time.deltaTime, Space.World);
                     }
-                    else if(animType.Equals("highAnim"))
+                    else if (animType.Equals("highAnim"))
                     {
                         anim.speed = 0.5f;
                         transform.Translate(directionToCamera * speed * Time.deltaTime, Space.World);

@@ -55,6 +55,8 @@ public class oBehaviourScript : MonoBehaviour
                 }
                 if (elapsedTimeNumber >= updateTime)
                 {
+                    int countDownValue = currentBlock.vitalValue.Length - currentValueIndex - 1;
+                    probeAlertText.text = "Please answer to the probe in " + countDownValue.ToString();
                     int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     O21ExperimentSequence.o21Block1Start = currentBlock.vitalValue[currentValueIndex];
                     if (O21ExperimentSequence.o21Block1Start > previousVital)
