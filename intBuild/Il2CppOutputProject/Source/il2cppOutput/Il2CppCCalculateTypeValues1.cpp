@@ -4914,7 +4914,7 @@ struct U3CRevealWordsU3Ed__8_t912CFD430C602C79AE6BC1BC6C4AEBF101B4D7C8  : public
 	int32_t ___U3CcounterU3E5__4;
 	int32_t ___U3CvisibleCountU3E5__5;
 };
-struct U3CwaiterU3Ed__7_t3F7A5F43664682CD3FC542F658C49835D9031FA1  : public RuntimeObject
+struct U3CwaiterU3Ed__8_tBA068DCD4E0C77EDCA4312E1783831CC06F3EBAF  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -21021,6 +21021,7 @@ struct DwellBehavior_tF557727B6353D54AE9190E64356E6B12759D270C  : public MonoBeh
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textHr;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textBp;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textO2;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___conObj;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___material;
 };
 struct EdgeCube_t15FD5BE91567F2FC26BEE151694EBFC97B22E846  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -21266,7 +21267,6 @@ struct OTestBehavior_t38ED7158880ADF77AABF18F78A964D9E590815DF  : public MonoBeh
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___mainCamera;
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim;
 	float ___speed;
-	float ___animationTimer;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___edgePosition;
 	float ___elapsedTime;
 	float ___updateTime;
@@ -21737,6 +21737,7 @@ struct TextGazeBehavior_tFAB168E6F79630C2B3CAE591F4C2C2B765E349E3  : public Mono
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textHr;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textBp;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___textO2;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___consoleObj;
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___visibilityCoroutine;
 	bool ___flag;
 };
@@ -22178,10 +22179,18 @@ struct XRSessionSubsystem_t1E6E6CD0C279BA8BC4E4ED94E539552036B9C399  : public Su
 struct bp2Behavior_t6AEC196FE8C07FA3C088229B06B34E53DB1CBC78  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___mainCamera;
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim;
 	float ___speed;
-	float ___animationTimer;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___edgePosition;
+	float ___updateTime;
+	float ___elapsedTimeNumber;
+	String_t* ___animType;
+	int32_t ___currentBlockIndex;
+	int32_t ___currentValueIndex;
+	BpBlock2U5BU5D_t85A3F86AEC51E712886778C76A49152CD3049888* ___expArray;
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___alarmLog;
+	TcpConnectionScript_tD8767472443BBD7B927A10C40BF8E118D242DCF0* ___tcpObj;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPosition;
+	float ___moveProgress;
 };
 struct bpBehavior_tAA9BCD0E97D498525C062074340A58B5512C99BF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -22201,10 +22210,18 @@ struct bpBehavior_tAA9BCD0E97D498525C062074340A58B5512C99BF  : public MonoBehavi
 struct hr2Behavior_t6B9D089E6A6362CF5BDC5B0C4B02FC6546540DE9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___mainCamera;
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim;
 	float ___speed;
-	float ___animationTimer;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___edgePosition;
+	float ___updateTime;
+	float ___elapsedTimeNumber;
+	String_t* ___animType;
+	int32_t ___currentBlockIndex;
+	int32_t ___currentValueIndex;
+	HrBlock2U5BU5D_t90E75628B9E8A435E72CBF9A463EABBCE7879C84* ___expArray;
+	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___alarmLog;
+	TcpConnectionScript_tD8767472443BBD7B927A10C40BF8E118D242DCF0* ___tcpObj;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPosition;
+	float ___moveProgress;
 };
 struct hrBehavior_t7B3B46B814DAA269A0270538B1F8D5AAF2313780  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -22226,11 +22243,8 @@ struct hrBehavior_t7B3B46B814DAA269A0270538B1F8D5AAF2313780  : public MonoBehavi
 struct o2Behavior_t3927C1DDA78140673BBF6544FC7C2255D443D9D4  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* ___mainCamera;
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim;
 	float ___speed;
-	float ___animationTimer;
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___edgePosition;
-	float ___elapsedTime;
 	float ___updateTime;
 	float ___elapsedTimeNumber;
 	String_t* ___animType;
@@ -22239,6 +22253,8 @@ struct o2Behavior_t3927C1DDA78140673BBF6544FC7C2255D443D9D4  : public MonoBehavi
 	O2Block2U5BU5D_t7B199B5899417F76FEF849591300FAF1A0A5D180* ___expArray;
 	BooleanU5BU5D_tD317D27C31DB892BE79FAE3AEBC0B3FFB73DE9B4* ___alarmLog;
 	TcpConnectionScript_tD8767472443BBD7B927A10C40BF8E118D242DCF0* ___tcpObj;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___startPosition;
+	float ___moveProgress;
 };
 struct oBehaviourScript_tEEE5B2C4625194A84A80CA2649111FD0EC47D57F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -33319,7 +33335,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7646 = { sizeof(TestBPAnimat
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7647;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7647 = { sizeof(TestDwellBehavior_t42CBD1ADF845473C07690AC49BA3F828D9C31CC9), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7648;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7648 = { sizeof(U3CwaiterU3Ed__7_t3F7A5F43664682CD3FC542F658C49835D9031FA1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7648 = { sizeof(U3CwaiterU3Ed__8_tBA068DCD4E0C77EDCA4312E1783831CC06F3EBAF), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7649;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7649 = { sizeof(TextGazeBehavior_tFAB168E6F79630C2B3CAE591F4C2C2B765E349E3), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7650;

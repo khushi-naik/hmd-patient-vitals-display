@@ -22,6 +22,8 @@ public static class HR1ExperimentSequence
     //patient 1 block 1
     public static readonly Block1[] hrExperimentBlock1 =
     {
+        new Block1(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}), //remove later
+        new Block1(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}), //remove later
         new Block1(new int[]{120,120,120,121,123,124,125,127,129,129,129,129,129,129,129,129,129,129,129,127}), //subblock1 of block 1 start hr-vh
         new Block1(new int[]{125,124,122,121,119,118,116,115,112,110,110,110,110,110,110,110,110,110,110,110}),
         new Block1(new int[]{110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110}),     //probe1

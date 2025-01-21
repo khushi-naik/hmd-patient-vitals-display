@@ -16,6 +16,8 @@ public static class BP2ExperimentSequence
     //patient 2 block 1
     public static readonly BpBlock2[] BpExperimentBlock2 =
     {
+        new BpBlock2(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}), //remove later
+        new BpBlock2(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}), //remove later
         new BpBlock2(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}),
         new BpBlock2(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}),
         new BpBlock2(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}), //subblock 1 of block1

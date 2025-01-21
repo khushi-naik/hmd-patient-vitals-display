@@ -17,6 +17,8 @@ public class DwellBehavior : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textO2;
 
+    public TextMeshProUGUI conObj;
+
     private Material material;
 
     private void Awake()
@@ -42,6 +44,7 @@ public class DwellBehavior : MonoBehaviour
         textO2.text = "O2: " + O21ExperimentSequence.o21Block1Start.ToString();
 
         textHr.GetComponent<BoxCollider>().enabled = true;
+        conObj.text = "activated";
     }
 
     /*public void OnSelectEntered(SelectEnterEventArgs _)

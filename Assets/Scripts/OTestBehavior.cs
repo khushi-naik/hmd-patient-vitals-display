@@ -8,7 +8,7 @@ public class OTestBehavior : MonoBehaviour
     public Camera mainCamera;
     private Animator anim;
     private float speed = 0.3f;
-    private float animationTimer = 0f;
+    //private float animationTimer = 0f;
     Vector3 edgePosition;
     private float elapsedTime = 0f;
     private float updateTime = 1f;

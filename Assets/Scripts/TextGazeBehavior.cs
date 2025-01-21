@@ -17,6 +17,8 @@ public class TextGazeBehavior : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textO2;
 
+    public TextMeshProUGUI consoleObj;
+
     private Coroutine visibilityCoroutine;
     private bool flag;
 
@@ -24,7 +26,7 @@ public class TextGazeBehavior : MonoBehaviour
     {
 
         flag = true;
-        
+        consoleObj.text = flag.ToString();
         //textDesc.GetComponent<BoxCollider>().enabled = true;
         //textDesc.text = "text2";
         //material.color = onHoverColor;
@@ -36,6 +38,7 @@ public class TextGazeBehavior : MonoBehaviour
         Debug.Log("exittttttt!!! ");
 
         flag = false;
+        consoleObj.text = flag.ToString();
         if (visibilityCoroutine != null)
         {
             StopCoroutine(visibilityCoroutine);

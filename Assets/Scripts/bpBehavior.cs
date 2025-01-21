@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
+
 public class bpBehavior : MonoBehaviour
 {
     private Animator anim;
@@ -50,6 +51,7 @@ public class bpBehavior : MonoBehaviour
                     {
                         if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
+                            anim.speed = 1.25f;
                             anim.Play("highAnim");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -59,6 +61,7 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
                         {
+                            anim.speed = 1.50f;
                             anim.Play("veryHighAnim");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -68,16 +71,19 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("justMoveBp");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 84 && Bp1ExperimentSequence.bp1Block1Start <= 102)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("lowToNormal");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 84)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("veryLowToLow");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -87,6 +93,7 @@ public class bpBehavior : MonoBehaviour
                     {
                         if (Bp1ExperimentSequence.bp1Block1Start <= 102 && Bp1ExperimentSequence.bp1Block1Start > 84)
                         {
+                            anim.speed = 1.25f;
                             anim.Play("lowAnim");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -96,6 +103,7 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 84)
                         {
+                            anim.speed = 1.50f;
                             anim.Play("veryLowAnim");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -105,16 +113,19 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("justMoveBp");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("highToNormal");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("veryHighToHigh");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -124,18 +135,22 @@ public class bpBehavior : MonoBehaviour
                     {
                         if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("justMoveBp");
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("staticHighToVeryHighAnim");
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 84)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("staticLowToVeryLowAnim");
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 102 && Bp1ExperimentSequence.bp1Block1Start > 84)
                         {
+                            anim.speed = 1.0f;
                             if (previousTrend.Contains("increase"))
                             {
                                 anim.Play("staticVeryLowToLowAnim");
@@ -147,6 +162,7 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
+                            anim.speed = 1.0f;
                             if (previousTrend.Contains("decrease"))
                             {
                                 anim.Play("staticVeryHighToHighAnim");
@@ -164,7 +180,10 @@ public class bpBehavior : MonoBehaviour
                         currentValueIndex = 0;
                         currentBlockIndex++;
                     }
-                    textBp.text = "BP: " + Bp1ExperimentSequence.bp1Block1Start.ToString();
+                    System.Random random = new System.Random();
+                    int diastolicBpValue = random.Next(30, 51);
+                    diastolicBpValue = Bp1ExperimentSequence.bp1Block1Start - diastolicBpValue;
+                    textBp.text = "BP: " + Bp1ExperimentSequence.bp1Block1Start.ToString() + "/" + diastolicBpValue.ToString();
                     elapsedTimeNumber = 0f;
                 }
                 elapsedTimeNumber += Time.deltaTime;

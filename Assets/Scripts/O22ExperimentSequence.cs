@@ -15,6 +15,8 @@ public static class O22ExperimentSequence
     //patient 2 block 1
     public static readonly O2Block2[] O2ExperimentBlock2 =
     {
+        new O2Block2(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}), //remove later
+        new O2Block2(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}), //remove later
         new O2Block2(new int[]{98,95,94,93,92,91,90,93,96,96,96,96,97,98,99,100,101,102,95,94,93,92,96,96,96}), //remove later
         new O2Block2(new int[]{98,95,94,93,92,91,90,93,96,96,96,96,97,98,99,100,101,102,95,94,93,92,96,96,96}), //remove later
         new O2Block2(new int[]{98,95,94,93,92,91,90,93,96,96,96,96,97,98,99,100,101,102,95,94,93,92,96,96,96}), //remove later

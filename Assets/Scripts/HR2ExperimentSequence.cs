@@ -21,6 +21,8 @@ public static class HR2ExperimentSequence
     //patient 2 block 1
     public static readonly HrBlock2[] hrExperimentBlock2 =
     {
+        new HrBlock2(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}), //remove later
+        new HrBlock2(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}), //remove later
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65}),
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65}),
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65}), //subblock 1 of block 1
@@ -89,7 +91,7 @@ public static class HR2ExperimentSequence
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65}),
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65}),
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,62,62}), //subblock 7 of block 2
-        new HrBlock2(new int[]{60,59,57,56,54,52,49,55,59,63,65,65,65,65,65,65,65,65,65,65}), //patient 2 alarm during patient 1 alarm
+        new HrBlock2(new int[]{60,59,57,56,54,52,49,55,59,63,65,65,65,65,65,65,65,65,65,65}), //patient 2 alarm during patient 1 alarm //hr-l
         new HrBlock2(new int[]{65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65})
     };*/
 }

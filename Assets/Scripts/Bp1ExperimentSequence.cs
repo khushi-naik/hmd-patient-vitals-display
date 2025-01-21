@@ -22,6 +22,8 @@ public class Bp1ExperimentSequence
     //patient 1 block1
     public static readonly BpBlock1[] BpExperimentBlock1 =
     {
+        new BpBlock1(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}), //remove later
+        new BpBlock1(new int[]{125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125}), //remove later
         new BpBlock1(new int[]{154,154,154,158,160,161,163,164,166,166,166,166,166,166,166,166,166,162,160,159}),   //subblock1 of block1 start bp-vh
         new BpBlock1(new int[]{159,159,157,154,152,151,146,143,142,140,140,140,140,140,140,140,140,140,140,140}),
         new BpBlock1(new int[]{140,140,140,140,140,140,140,140,140,140,140,140,140,140,140,140,140,140,140,140}),       //probe1

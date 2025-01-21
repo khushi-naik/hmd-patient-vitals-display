@@ -48,10 +48,32 @@ public class oBehaviourScript : MonoBehaviour
                 if (currentBlock.isProbe)
                 {
                     probeAlertText.enabled = true;
+                    GameObject[] objectsToHide = GameObject.FindGameObjectsWithTag("hideDuringProbe");
+
+                    // Loop through each GameObject and disable its renderer
+                    foreach (GameObject obj in objectsToHide)
+                    {
+                        Renderer renderer = obj.GetComponent<Renderer>();
+                        if (renderer != null)
+                        {
+                            renderer.enabled = false;
+                        }
+                    }
                 }
                 else
                 {
                     probeAlertText.enabled = false;
+                    GameObject[] objectsToHide = GameObject.FindGameObjectsWithTag("hideDuringProbe");
+
+                    // Loop through each GameObject and disable its renderer
+                    foreach (GameObject obj in objectsToHide)
+                    {
+                        Renderer renderer = obj.GetComponent<Renderer>();
+                        if (renderer != null)
+                        {
+                            renderer.enabled = true;
+                        }
+                    }
                 }
                 if (elapsedTimeNumber >= updateTime)
                 {
@@ -63,16 +85,19 @@ public class oBehaviourScript : MonoBehaviour
                     {
                         if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("o2ReturnLowToNormal");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (O21ExperimentSequence.o21Block1Start <= 89)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("o2ReturnVeryLowToLow");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("justMoveO");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -82,6 +107,7 @@ public class oBehaviourScript : MonoBehaviour
                     {
                         if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
+                            anim.speed = 1.25f;
                             anim.Play("o2NormalToLow");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -91,6 +117,7 @@ public class oBehaviourScript : MonoBehaviour
                         }
                         else if (O21ExperimentSequence.o21Block1Start <= 89)
                         {
+                            anim.speed = 1.50f;
                             anim.Play("o2LowToVeryLow");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -100,6 +127,7 @@ public class oBehaviourScript : MonoBehaviour
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("justMoveO");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -109,10 +137,12 @@ public class oBehaviourScript : MonoBehaviour
                     {
                         if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("justMoveO");
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
+                            anim.speed = 1.0f;
                             if (previousTrend.Contains("increase"))
                             {
                                 anim.Play("o2StaticVeryLowToLow");
@@ -125,6 +155,7 @@ public class oBehaviourScript : MonoBehaviour
                         }
                         else if (O21ExperimentSequence.o21Block1Start <= 89)
                         {
+                            anim.speed = 1.0f;
                             anim.Play("o2StaticLowToVeryLow");
                         }
                     }

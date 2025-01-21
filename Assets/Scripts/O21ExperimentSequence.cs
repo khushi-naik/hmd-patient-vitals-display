@@ -24,6 +24,8 @@ public static class O21ExperimentSequence
     //patient 1 block 1
     public static readonly O2Block1[] o2ExperimentBlock1 =
     {
+        new O2Block1(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98},false), //remove later
+        new O2Block1(new int[]{98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98},false), //remove later
         new O2Block1(new int[]{96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96,96},false), //subblock1 of block 1 start
         new O2Block1(new int[]{96,96,96,95,94,93,92,91,90,90,90,90,90,90,90,90,90,90,90,90},false),     //o2-l
         new O2Block1(new int[]{90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90},true),     //probe1 
