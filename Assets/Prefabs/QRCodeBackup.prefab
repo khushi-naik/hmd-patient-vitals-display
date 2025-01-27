@@ -933,7 +933,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3081018846664455463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -1034,8 +1034,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 70, y: 180, z: 0}
-  m_Center: {x: -35, y: -70, z: 0}
+  m_Size: {x: 60, y: 180, z: 0}
+  m_Center: {x: -35, y: -85, z: 0}
 --- !u!114 &7357683457734547011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6031121519634376234}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   textHr: {fileID: 1150450410814753803}
   textBp: {fileID: 6112622062001522694}
   textO2: {fileID: 7650845135440156916}
-  conObj: {fileID: 0}
+  conObj: {fileID: 1678890182404422099}
 --- !u!114 &2049004740875609162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
+  m_AllowGazeSelect: 1
   m_OverrideGazeTimeToSelect: 0
   m_GazeTimeToSelect: 0.5
   m_OverrideTimeToAutoDeselectGaze: 0
@@ -2093,12 +2093,12 @@ MonoBehaviour:
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
-  <TriggerOnRelease>k__BackingField: 1
+  <TriggerOnRelease>k__BackingField: 0
   <UseGazeDwell>k__BackingField: 1
   <GazeDwellTime>k__BackingField: 2
   <UseFarDwell>k__BackingField: 1
   <FarDwellTime>k__BackingField: 2
-  allowSelectByVoice: 1
+  allowSelectByVoice: 0
   speechRecognitionKeyword: select
   <VoiceRequiresFocus>k__BackingField: 1
   <SelectRequiresHover>k__BackingField: 0
@@ -2387,7 +2387,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7550075418984461040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
+  m_AllowGazeSelect: 1
   m_OverrideGazeTimeToSelect: 0
   m_GazeTimeToSelect: 0.5
   m_OverrideTimeToAutoDeselectGaze: 0
@@ -2810,12 +2810,12 @@ MonoBehaviour:
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
-  <TriggerOnRelease>k__BackingField: 1
+  <TriggerOnRelease>k__BackingField: 0
   <UseGazeDwell>k__BackingField: 1
   <GazeDwellTime>k__BackingField: 2
   <UseFarDwell>k__BackingField: 1
   <FarDwellTime>k__BackingField: 2
-  allowSelectByVoice: 1
+  allowSelectByVoice: 0
   speechRecognitionKeyword: select
   <VoiceRequiresFocus>k__BackingField: 1
   <SelectRequiresHover>k__BackingField: 0
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   textHr: {fileID: 1150450410814753803}
   textBp: {fileID: 6112622062001522694}
   textO2: {fileID: 7650845135440156916}
-  conObj: {fileID: 0}
+  conObj: {fileID: 1678890182404422099}
 --- !u!1 &7917215554859562229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,7 +2998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 0}
+  m_AnchoredPosition: {x: 50, y: -250}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1603464334937496579
@@ -3509,7 +3509,7 @@ MonoBehaviour:
   m_FocusMode: 1
   m_CustomReticle: {fileID: 0}
   m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
+  m_AllowGazeSelect: 1
   m_OverrideGazeTimeToSelect: 0
   m_GazeTimeToSelect: 0.5
   m_OverrideTimeToAutoDeselectGaze: 0
@@ -3683,12 +3683,12 @@ MonoBehaviour:
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
-  <TriggerOnRelease>k__BackingField: 1
+  <TriggerOnRelease>k__BackingField: 0
   <UseGazeDwell>k__BackingField: 1
   <GazeDwellTime>k__BackingField: 2
   <UseFarDwell>k__BackingField: 1
   <FarDwellTime>k__BackingField: 2
-  allowSelectByVoice: 1
+  allowSelectByVoice: 0
   speechRecognitionKeyword: select
   <VoiceRequiresFocus>k__BackingField: 1
   <SelectRequiresHover>k__BackingField: 0
@@ -3724,7 +3724,7 @@ MonoBehaviour:
   textHr: {fileID: 1150450410814753803}
   textBp: {fileID: 6112622062001522694}
   textO2: {fileID: 7650845135440156916}
-  conObj: {fileID: 0}
+  conObj: {fileID: 1678890182404422099}
 --- !u!1 &9156590982899661875
 GameObject:
   m_ObjectHideFlags: 0

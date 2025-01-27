@@ -44,7 +44,9 @@ public class DwellBehavior : MonoBehaviour
         textO2.text = "O2: " + O21ExperimentSequence.o21Block1Start.ToString();
 
         textHr.GetComponent<BoxCollider>().enabled = true;
-        conObj.text = "activated";
+        conObj.text = "activated " + textHr.GetComponent<BoxCollider>().enabled.ToString()+ " "+ _.interactorObject.transform.name;
+
+       
     }
 
     /*public void OnSelectEntered(SelectEnterEventArgs _)
