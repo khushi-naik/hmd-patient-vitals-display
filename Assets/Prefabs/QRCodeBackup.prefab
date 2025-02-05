@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 5684703362661116244}
   m_Layer: 5
   m_Name: hr
-  m_TagString: Untagged
+  m_TagString: hideDuringProbe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1420,7 +1420,7 @@ GameObject:
   - component: {fileID: 6112622062001522694}
   m_Layer: 5
   m_Name: bp
-  m_TagString: Untagged
+  m_TagString: hideDuringProbe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2348,7 +2348,7 @@ GameObject:
   - component: {fileID: 7650845135440156916}
   m_Layer: 5
   m_Name: o2
-  m_TagString: Untagged
+  m_TagString: hideDuringProbe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

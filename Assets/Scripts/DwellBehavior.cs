@@ -1,6 +1,8 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections;
+using System.Collections.Generic;
 
 public class DwellBehavior : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class DwellBehavior : MonoBehaviour
     public TextMeshProUGUI conObj;
 
     private Material material;
+    private Coroutine resetTextCoroutine;
 
     private void Awake()
     {
@@ -35,7 +38,7 @@ public class DwellBehavior : MonoBehaviour
         //material.color = onSelectColor;
         //textDesc.SetActive(true);
         textHr.enabled = true;
-        textHr.text = "HR: 60";
+        textHr.text = "HR: " + HR1ExperimentSequence.hr1Block1Start.ToString();
 
         textBp.enabled = true;
         textBp.text = "BP: " + Bp1ExperimentSequence.bp1Block1Start.ToString();
@@ -45,8 +48,35 @@ public class DwellBehavior : MonoBehaviour
 
         textHr.GetComponent<BoxCollider>().enabled = true;
         conObj.text = "activated " + textHr.GetComponent<BoxCollider>().enabled.ToString()+ " "+ _.interactorObject.transform.name;
+        if (resetTextCoroutine != null)
+        {
+            StopCoroutine(resetTextCoroutine);
+            resetTextCoroutine = null;
+        }
+        resetTextCoroutine = StartCoroutine(waiterCountdown());
 
-       
+    }
+
+    IEnumerator waiterCountdown()
+    {
+
+        //Debug.Log("enter sleep ");
+        //Wait for 4 seconds
+        conObj.text = "before countdown";
+        yield return new WaitForSeconds(5);
+        //deb.text = "wait over";
+        //Debug.Log("about toooo false ");
+        if (CommonPrototypeVariables.hasSeenText == false)
+        {
+            //deb.text = "disabling all..";
+            textHr.GetComponent<BoxCollider>().enabled = false;
+            textHr.enabled = false;
+            textBp.enabled = false;
+            textO2.enabled = false;
+        }
+        resetTextCoroutine = null;
+        conObj.text = "afterrr countdown";
+        //textDesc.enabled = false;
     }
 
     /*public void OnSelectEntered(SelectEnterEventArgs _)

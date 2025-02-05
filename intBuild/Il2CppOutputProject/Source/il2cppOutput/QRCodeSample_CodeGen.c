@@ -29,8 +29,15 @@ extern void CubeGazeBehavior_OnGazeHoverExited_m8A983AA3C9C5FD881C99AAABC74D503C
 extern void CubeGazeBehavior__ctor_m479109F45527BA40DC7679E6BBFCB396F412F3DF (void);
 extern void DwellBehavior_Awake_m798C82747F623CA1FC3FBE2178E6B84007B60232 (void);
 extern void DwellBehavior_OnSelectEntered_mFD2E1159A6D7CAAE44B49B547F0BAFA7099DB390 (void);
+extern void DwellBehavior_waiterCountdown_m57DE564F2357E74AD1C98D976F83BC99C3FD8DB5 (void);
 extern void DwellBehavior_OnSelectExited_m4DC98988809C89B4C25CF625111394E77A5A1B4E (void);
 extern void DwellBehavior__ctor_m90549C472789DE0F12CE3B254A789D77BFC27A44 (void);
+extern void U3CwaiterCountdownU3Ed__8__ctor_m1E9DD7E12CA61409658CDA0C3A9DEB46E711E570 (void);
+extern void U3CwaiterCountdownU3Ed__8_System_IDisposable_Dispose_m5962BC613FCA314C9426D81F8F750049BCF2CDA4 (void);
+extern void U3CwaiterCountdownU3Ed__8_MoveNext_mBDBC7B7F03ACD4398555758489157579AC4E6835 (void);
+extern void U3CwaiterCountdownU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8B2B4893538BA7622FBDC252AE6B3324C43396C5 (void);
+extern void U3CwaiterCountdownU3Ed__8_System_Collections_IEnumerator_Reset_m7C5F787BC6332F5A0F2B8CF6563F79A83A1EF293 (void);
+extern void U3CwaiterCountdownU3Ed__8_System_Collections_IEnumerator_get_Current_m845DDB41A50B4B9B34B3B1630F817AE0C050097B (void);
 extern void EdgeCube_Start_m77B8D7A09506B431EA260CD04A4E29699CEEE682 (void);
 extern void EdgeCube_Update_m5E729909B122865962089C0CDC4BA0AE21F0DADD (void);
 extern void EdgeCube__ctor_m1CCD546B7ACE9873AE1494CACB38E8D6F65ECFA7 (void);
@@ -171,7 +178,7 @@ extern void FollowEyeGaze_OnDisable_mA3B2CED1B7C4F144109354803C847B7F3501E374 (v
 extern void FollowEyeGaze_Update_mF5B9741EB929BEB2000753D196C111037C8C9BF2 (void);
 extern void FollowEyeGaze_FollowEyeGazeAction_m9E68E99FA7743C4118516843948DB4C7938766B5 (void);
 extern void FollowEyeGaze__ctor_m471553EFC9573FF6357FDEC1302F008B88D8AA5C (void);
-static Il2CppMethodPointer s_methodPointers[168] = 
+static Il2CppMethodPointer s_methodPointers[175] = 
 {
 	BpBlock1__ctor_mAA3E43740BD7ADB99390628B05333725DC2EFAB0,
 	Bp1ExperimentSequence__ctor_m0985E15CB8A29892E6CE111B27874200F2BA5CE9,
@@ -190,8 +197,15 @@ static Il2CppMethodPointer s_methodPointers[168] =
 	CubeGazeBehavior__ctor_m479109F45527BA40DC7679E6BBFCB396F412F3DF,
 	DwellBehavior_Awake_m798C82747F623CA1FC3FBE2178E6B84007B60232,
 	DwellBehavior_OnSelectEntered_mFD2E1159A6D7CAAE44B49B547F0BAFA7099DB390,
+	DwellBehavior_waiterCountdown_m57DE564F2357E74AD1C98D976F83BC99C3FD8DB5,
 	DwellBehavior_OnSelectExited_m4DC98988809C89B4C25CF625111394E77A5A1B4E,
 	DwellBehavior__ctor_m90549C472789DE0F12CE3B254A789D77BFC27A44,
+	U3CwaiterCountdownU3Ed__8__ctor_m1E9DD7E12CA61409658CDA0C3A9DEB46E711E570,
+	U3CwaiterCountdownU3Ed__8_System_IDisposable_Dispose_m5962BC613FCA314C9426D81F8F750049BCF2CDA4,
+	U3CwaiterCountdownU3Ed__8_MoveNext_mBDBC7B7F03ACD4398555758489157579AC4E6835,
+	U3CwaiterCountdownU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8B2B4893538BA7622FBDC252AE6B3324C43396C5,
+	U3CwaiterCountdownU3Ed__8_System_Collections_IEnumerator_Reset_m7C5F787BC6332F5A0F2B8CF6563F79A83A1EF293,
+	U3CwaiterCountdownU3Ed__8_System_Collections_IEnumerator_get_Current_m845DDB41A50B4B9B34B3B1630F817AE0C050097B,
 	EdgeCube_Start_m77B8D7A09506B431EA260CD04A4E29699CEEE682,
 	EdgeCube_Update_m5E729909B122865962089C0CDC4BA0AE21F0DADD,
 	EdgeCube__ctor_m1CCD546B7ACE9873AE1494CACB38E8D6F65ECFA7,
@@ -347,11 +361,11 @@ extern void U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACB
 extern void ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[3] = 
 {
-	{ 0x06000084, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
-	{ 0x06000085, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
-	{ 0x06000092, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
+	{ 0x0600008B, U3CStartU3Ed__29_MoveNext_m05EFE9E502D19CFFF7E188A326E598ED9092A5B5_AdjustorThunk },
+	{ 0x0600008C, U3CStartU3Ed__29_SetStateMachine_m8420367E62B45A6F79354CAEE6FD543ACBD36B8C_AdjustorThunk },
+	{ 0x06000099, ActionData__ctor_m227491975E716FBEEF4B134D27FBE0C35275BAF6_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[168] = 
+static const int32_t s_InvokerIndices[175] = 
 {
 	6988,
 	8866,
@@ -370,8 +384,15 @@ static const int32_t s_InvokerIndices[168] =
 	8866,
 	8866,
 	6988,
+	8721,
 	6988,
 	8866,
+	6946,
+	8866,
+	8583,
+	8721,
+	8866,
+	8721,
 	8866,
 	8866,
 	8866,
@@ -524,9 +545,9 @@ static const int32_t s_InvokerIndices[168] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x02000027, { 3, 3 } },
-	{ 0x0200002E, { 6, 5 } },
-	{ 0x06000067, { 0, 3 } },
+	{ 0x02000028, { 3, 3 } },
+	{ 0x0200002F, { 6, 5 } },
+	{ 0x0600006E, { 0, 3 } },
 };
 extern const uint32_t g_rgctx_TData_t839F02FA7777FEF1BD27577E8384BD4EC15A2872;
 extern const uint32_t g_rgctx_QRCodeEventArgs_1_t169DE04BB5A9946810D16142DDF514F1C813FA0D;
@@ -557,7 +578,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule;
 const Il2CppCodeGenModule g_QRCodeSample_CodeGenModule = 
 {
 	"QRCodeSample.dll",
-	168,
+	175,
 	s_methodPointers,
 	3,
 	s_adjustorThunks,

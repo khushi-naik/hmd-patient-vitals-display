@@ -27,6 +27,7 @@ public class TextGazeBehavior : MonoBehaviour
 
         flag = true;
         consoleObj.text = flag.ToString();
+        CommonPrototypeVariables.hasSeenText = true;
         //textDesc.GetComponent<BoxCollider>().enabled = true;
         //textDesc.text = "text2";
         //material.color = onHoverColor;
@@ -71,6 +72,7 @@ public class TextGazeBehavior : MonoBehaviour
             textHr.enabled = false;
             textBp.enabled = false;
             textO2.enabled = false;
+            CommonPrototypeVariables.hasSeenText = false;
         }
         visibilityCoroutine = null;
         //textDesc.enabled = false;
