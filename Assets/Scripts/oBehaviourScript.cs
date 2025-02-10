@@ -10,6 +10,8 @@ public class oBehaviourScript : MonoBehaviour
     private Animator anim;
     private float elapsedTime = 0f;
     public TextMeshProUGUI textO2;
+    public TextMeshProUGUI textHr;
+    public TextMeshProUGUI textBp;
     public TextMeshProUGUI probeAlertText;
     private float updateTime = 1f;
     private float elapsedTimeNumber = 0f;
@@ -59,6 +61,10 @@ public class oBehaviourScript : MonoBehaviour
                             renderer.enabled = false;
                         }
                     }
+                    textO2.enabled = false;
+                    textBp.enabled = false;
+                    textHr.enabled = false;
+                    textHr.GetComponent<BoxCollider>().enabled = false;
                 }
                 else
                 {
@@ -74,6 +80,10 @@ public class oBehaviourScript : MonoBehaviour
                             renderer.enabled = true;
                         }
                     }
+                    //textO2.enabled = true;
+                    //textBp.enabled = true;
+                    //textHr.enabled = true;
+                    //textHr.GetComponent<BoxCollider>().enabled = true;
                 }
                 if (elapsedTimeNumber >= updateTime)
                 {

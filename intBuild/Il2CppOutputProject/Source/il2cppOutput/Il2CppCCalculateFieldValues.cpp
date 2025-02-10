@@ -28706,9 +28706,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1470[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1471[11] = 
 {
 	0,0,0,0,0,0,0,0,0,0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1472[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1472[5] = 
 {
-	0,0,0,};
+	0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable1473[2] = 
 {
 	static_cast<int32_t>(offsetof(PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8, ___Head)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8, ___Tail)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
