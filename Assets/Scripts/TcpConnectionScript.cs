@@ -11,7 +11,7 @@ public class TcpConnectionScript : MonoBehaviour
 {
     private TcpClient client;
     private StreamWriter writer;
-    private string serverIp = "10.121.83.179";//"10.121.204.39";
+    private string serverIp = "10.121.47.205";//"10.121.204.39";
     private int serverPort = 80;
     private int i = 0;
     private float timer;

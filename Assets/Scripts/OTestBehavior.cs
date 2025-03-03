@@ -5,7 +5,7 @@ using System;
 
 public class OTestBehavior : MonoBehaviour
 {
-    public Camera mainCamera;
+    /*public Camera mainCamera;
     private Animator anim;
     private float speed = 0.3f;
     //private float animationTimer = 0f;
@@ -150,5 +150,5 @@ public class OTestBehavior : MonoBehaviour
             }
         
         
-    }
+    }*/
 }

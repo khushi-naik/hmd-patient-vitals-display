@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 6201887348176147454}
   - component: {fileID: 3476414154153755052}
   - component: {fileID: 2184607987240787940}
+  - component: {fileID: 7962476380425511307}
   m_Layer: 0
   m_Name: oxygenSaturation2
   m_TagString: hideDuringProbe
@@ -558,7 +559,7 @@ Transform:
   m_GameObject: {fileID: 1486323273351582766}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.14, z: 0.05}
+  m_LocalPosition: {x: 0.35, y: 0.14, z: 0.05}
   m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -648,6 +649,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+--- !u!95 &7962476380425511307
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486323273351582766}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2818be451fe639d4fa70a91624c28e14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1939233893021652989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,6 +1324,7 @@ GameObject:
   - component: {fileID: 357328512963514757}
   - component: {fileID: 7516294002132594008}
   - component: {fileID: 403279624106195112}
+  - component: {fileID: 8267263587849331763}
   m_Layer: 0
   m_Name: heartRate2
   m_TagString: hideDuringProbe
@@ -1318,7 +1341,7 @@ Transform:
   m_GameObject: {fileID: 4627344263121565868}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.02, z: 0.05}
+  m_LocalPosition: {x: 0.35, y: 0.02, z: 0.05}
   m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1408,6 +1431,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+--- !u!95 &8267263587849331763
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4627344263121565868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74dff766a11ce5143bcefb6277ce16af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6031121519634376234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2286,7 @@ GameObject:
   - component: {fileID: 3528490004403128317}
   - component: {fileID: 2520789826745812129}
   - component: {fileID: 7914828141300688106}
+  - component: {fileID: 6654924003793395352}
   m_Layer: 0
   m_Name: bloodPressure2
   m_TagString: hideDuringProbe
@@ -2258,7 +2303,7 @@ Transform:
   m_GameObject: {fileID: 7042983635633734398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0.08, z: 0.05}
+  m_LocalPosition: {x: 0.35, y: 0.08, z: 0.05}
   m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2348,6 +2393,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+--- !u!95 &6654924003793395352
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042983635633734398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 430485554a5729f4bb6a61b28c3673ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7266210407229196675
 GameObject:
   m_ObjectHideFlags: 0

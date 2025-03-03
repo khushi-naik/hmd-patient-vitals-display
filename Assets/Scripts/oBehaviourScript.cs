@@ -97,25 +97,25 @@ public class oBehaviourScript : MonoBehaviour
                         probeAlertText.text = "Please answer to the probe in 20";
                     }
                     
-                    int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    float previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     O21ExperimentSequence.o21Block1Start = currentBlock.vitalValue[currentValueIndex];
                     if (O21ExperimentSequence.o21Block1Start > previousVital)
                     {
                         if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("o2ReturnLowToNormal");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (O21ExperimentSequence.o21Block1Start <= 89)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("o2ReturnVeryLowToLow");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("justMoveO");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -145,7 +145,7 @@ public class oBehaviourScript : MonoBehaviour
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("justMoveO");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -155,12 +155,12 @@ public class oBehaviourScript : MonoBehaviour
                     {
                         if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("justMoveO");
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             if (previousTrend.Contains("increase"))
                             {
                                 anim.Play("o2StaticVeryLowToLow");
@@ -173,7 +173,7 @@ public class oBehaviourScript : MonoBehaviour
                         }
                         else if (O21ExperimentSequence.o21Block1Start <= 89)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("o2StaticLowToVeryLow");
                         }
                     }

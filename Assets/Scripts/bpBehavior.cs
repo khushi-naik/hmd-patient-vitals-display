@@ -51,7 +51,7 @@ public class bpBehavior : MonoBehaviour
                     {
                         if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
-                            anim.speed = 1.25f;
+                            anim.speed = 1.0f;
                             anim.Play("highAnim");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -71,19 +71,19 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("justMoveBp");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 84 && Bp1ExperimentSequence.bp1Block1Start <= 102)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("lowToNormal");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 84)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("veryLowToLow");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -93,7 +93,7 @@ public class bpBehavior : MonoBehaviour
                     {
                         if (Bp1ExperimentSequence.bp1Block1Start <= 102 && Bp1ExperimentSequence.bp1Block1Start > 84)
                         {
-                            anim.speed = 1.25f;
+                            anim.speed = 1.0f;
                             anim.Play("lowAnim");
                             if (!alarmLog[currentBlockIndex])
                             {
@@ -113,19 +113,19 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("justMoveBp");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("highToNormal");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("veryHighToHigh");
                             alarmLog[currentBlockIndex] = false;
                         }
@@ -135,22 +135,22 @@ public class bpBehavior : MonoBehaviour
                     {
                         if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("justMoveBp");
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("staticHighToVeryHighAnim");
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 84)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             anim.Play("staticLowToVeryLowAnim");
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start <= 102 && Bp1ExperimentSequence.bp1Block1Start > 84)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             if (previousTrend.Contains("increase"))
                             {
                                 anim.Play("staticVeryLowToLowAnim");
@@ -162,7 +162,7 @@ public class bpBehavior : MonoBehaviour
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
-                            anim.speed = 1.0f;
+                            anim.speed = 0.5f;
                             if (previousTrend.Contains("decrease"))
                             {
                                 anim.Play("staticVeryHighToHighAnim");
