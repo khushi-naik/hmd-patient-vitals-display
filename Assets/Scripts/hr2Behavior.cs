@@ -26,6 +26,8 @@ public class hr2Behavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.speed = 0.5f;
+        anim.Play("justMove");
         //testArray = HR1ExperimentSequence.expSeq;
         expArray = HR2ExperimentSequence.hrExperimentBlock2;
         //textHr.enabled = false;

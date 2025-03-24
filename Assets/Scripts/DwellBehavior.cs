@@ -47,7 +47,7 @@ public class DwellBehavior : MonoBehaviour
         textO2.text = "O2: " + O21ExperimentSequence.o21Block1Start.ToString();
 
         textHr.GetComponent<BoxCollider>().enabled = true;
-        conObj.text = "activated " + textHr.GetComponent<BoxCollider>().enabled.ToString()+ " "+ _.interactorObject.transform.name;
+        //conObj.text = "activated " + textHr.GetComponent<BoxCollider>().enabled.ToString()+ " "+ _.interactorObject.transform.name;
         if (resetTextCoroutine != null)
         {
             StopCoroutine(resetTextCoroutine);
@@ -62,7 +62,7 @@ public class DwellBehavior : MonoBehaviour
 
         //Debug.Log("enter sleep ");
         //Wait for 4 seconds
-        conObj.text = "before countdown";
+        //conObj.text = "before countdown";
         yield return new WaitForSeconds(5);
         //deb.text = "wait over";
         //Debug.Log("about toooo false ");
@@ -75,7 +75,7 @@ public class DwellBehavior : MonoBehaviour
             textO2.enabled = false;
         }
         resetTextCoroutine = null;
-        conObj.text = "afterrr countdown";
+        //conObj.text = "afterrr countdown";
         //textDesc.enabled = false;
     }
 

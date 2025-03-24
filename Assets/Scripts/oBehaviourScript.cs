@@ -101,7 +101,7 @@ public class oBehaviourScript : MonoBehaviour
                     O21ExperimentSequence.o21Block1Start = currentBlock.vitalValue[currentValueIndex];
                     if (O21ExperimentSequence.o21Block1Start > previousVital)
                     {
-                        if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
+                        /*if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
                             anim.speed = 0.5f;
                             anim.Play("o2ReturnLowToNormal");
@@ -111,6 +111,12 @@ public class oBehaviourScript : MonoBehaviour
                         {
                             anim.speed = 0.5f;
                             anim.Play("o2ReturnVeryLowToLow");
+                            alarmLog[currentBlockIndex] = false;
+                        }*/
+                        if (O21ExperimentSequence.o21Block1Start <= 95)
+                        {
+                            anim.speed = 0.5f;
+                            anim.Play("o2ReturnLowToNormal2");
                             alarmLog[currentBlockIndex] = false;
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 96)
@@ -123,7 +129,7 @@ public class oBehaviourScript : MonoBehaviour
                     }
                     else if (O21ExperimentSequence.o21Block1Start < previousVital)
                     {
-                        if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
+                        /*if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
                             anim.speed = 1.25f;
                             anim.Play("o2NormalToLow");
@@ -142,6 +148,18 @@ public class oBehaviourScript : MonoBehaviour
                                 tcpObj.sendMessage("O21, low to very low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
+                        }*/
+                        if (O21ExperimentSequence.o21Block1Start <= 95)
+                        {
+                            anim.speed = 1.75f;
+                            anim.Play("o2NormalToLow2");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                //tcpObj.sendMessage("hello from script");
+                                tcpObj.sendMessage("O21, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+
+                            }
                         }
                         else if (O21ExperimentSequence.o21Block1Start >= 96)
                         {
@@ -158,7 +176,12 @@ public class oBehaviourScript : MonoBehaviour
                             anim.speed = 0.5f;
                             anim.Play("justMoveO");
                         }
-                        else if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
+                        else if (O21ExperimentSequence.o21Block1Start <= 95)
+                        {
+                            anim.speed = 0.5f;
+                            anim.Play("o2StaticNormalToLow2");
+                        }
+                        /*else if (O21ExperimentSequence.o21Block1Start >= 90 && O21ExperimentSequence.o21Block1Start <= 95)
                         {
                             anim.speed = 0.5f;
                             if (previousTrend.Contains("increase"))
@@ -175,7 +198,7 @@ public class oBehaviourScript : MonoBehaviour
                         {
                             anim.speed = 0.5f;
                             anim.Play("o2StaticLowToVeryLow");
-                        }
+                        }*/
                     }
                     currentValueIndex++;
                     if (currentValueIndex >= currentBlock.vitalValue.Length)

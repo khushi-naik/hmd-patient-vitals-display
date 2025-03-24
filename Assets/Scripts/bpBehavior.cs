@@ -49,7 +49,7 @@ public class bpBehavior : MonoBehaviour
                     Bp1ExperimentSequence.bp1Block1Start = currentBlock.vitalValue[currentValueIndex];
                     if (Bp1ExperimentSequence.bp1Block1Start > previousVital)
                     {
-                        if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
+                        /*if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
                             anim.speed = 1.0f;
                             anim.Play("highAnim");
@@ -68,6 +68,16 @@ public class bpBehavior : MonoBehaviour
                                 tcpObj.sendMessage("BP1, high to very high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + Bp1ExperimentSequence.bp1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
+                        }*/
+                        if (Bp1ExperimentSequence.bp1Block1Start >= 138)
+                        {
+                            anim.speed = 1.75f;
+                            anim.Play("bpNormalToHigh2");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                tcpObj.sendMessage("BP1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + Bp1ExperimentSequence.bp1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+                            }
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
@@ -75,7 +85,13 @@ public class bpBehavior : MonoBehaviour
                             anim.Play("justMoveBp");
                             alarmLog[currentBlockIndex] = false;
                         }
-                        else if (Bp1ExperimentSequence.bp1Block1Start > 84 && Bp1ExperimentSequence.bp1Block1Start <= 102)
+                        else if (Bp1ExperimentSequence.bp1Block1Start <= 102)
+                        {
+                            anim.speed = 0.5f;
+                            anim.Play("bpReturnLowToNormal2");
+                            alarmLog[currentBlockIndex] = false;
+                        }
+                        /*else if (Bp1ExperimentSequence.bp1Block1Start > 84 && Bp1ExperimentSequence.bp1Block1Start <= 102)
                         {
                             anim.speed = 0.5f;
                             anim.Play("lowToNormal");
@@ -86,12 +102,12 @@ public class bpBehavior : MonoBehaviour
                             anim.speed = 0.5f;
                             anim.Play("veryLowToLow");
                             alarmLog[currentBlockIndex] = false;
-                        }
+                        }*/
                         previousTrend = "increase";
                     }
                     else if (Bp1ExperimentSequence.bp1Block1Start < previousVital)
                     {
-                        if (Bp1ExperimentSequence.bp1Block1Start <= 102 && Bp1ExperimentSequence.bp1Block1Start > 84)
+                        /*if (Bp1ExperimentSequence.bp1Block1Start <= 102 && Bp1ExperimentSequence.bp1Block1Start > 84)
                         {
                             anim.speed = 1.0f;
                             anim.Play("lowAnim");
@@ -110,6 +126,16 @@ public class bpBehavior : MonoBehaviour
                                 tcpObj.sendMessage("BP1, low to very low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
+                        }*/
+                        if (Bp1ExperimentSequence.bp1Block1Start <= 102)
+                        {
+                            anim.speed = 1.75f;
+                            anim.Play("bpNormalToLow2");
+                            if (!alarmLog[currentBlockIndex])
+                            {
+                                tcpObj.sendMessage("BP1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                alarmLog[currentBlockIndex] = true;
+                            }
                         }
                         else if (Bp1ExperimentSequence.bp1Block1Start > 102 && Bp1ExperimentSequence.bp1Block1Start < 138)
                         {
@@ -117,7 +143,13 @@ public class bpBehavior : MonoBehaviour
                             anim.Play("justMoveBp");
                             alarmLog[currentBlockIndex] = false;
                         }
-                        else if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
+                        else if (Bp1ExperimentSequence.bp1Block1Start >= 138)
+                        {
+                            anim.speed = 0.5f;
+                            anim.Play("bpReturnHighToNormal2");
+                            alarmLog[currentBlockIndex] = false;
+                        }
+                        /*else if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
                         {
                             anim.speed = 0.5f;
                             anim.Play("highToNormal");
@@ -128,7 +160,7 @@ public class bpBehavior : MonoBehaviour
                             anim.speed = 0.5f;
                             anim.Play("veryHighToHigh");
                             alarmLog[currentBlockIndex] = false;
-                        }
+                        }*/
                         previousTrend = "decrease";
                     }
                     else if (Bp1ExperimentSequence.bp1Block1Start == previousVital)
@@ -138,7 +170,17 @@ public class bpBehavior : MonoBehaviour
                             anim.speed = 0.5f;
                             anim.Play("justMoveBp");
                         }
-                        else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
+                        else if (Bp1ExperimentSequence.bp1Block1Start <= 102)
+                        {
+                            anim.speed = 0.5f;
+                            anim.Play("bpStaticNormalToLow2");
+                        }
+                        else if (Bp1ExperimentSequence.bp1Block1Start >= 138)
+                        {
+                            anim.speed = 0.5f;
+                            anim.Play("bpStaticNormalToHigh2");
+                        }
+                        /*else if (Bp1ExperimentSequence.bp1Block1Start >= 156)
                         {
                             anim.speed = 0.5f;
                             anim.Play("staticHighToVeryHighAnim");
@@ -171,7 +213,7 @@ public class bpBehavior : MonoBehaviour
                             {
                                 anim.Play("staticNormalToHighAnim");
                             }
-                        }
+                        }*/
                         alarmLog[currentBlockIndex] = false;
                     }
                     currentValueIndex++;

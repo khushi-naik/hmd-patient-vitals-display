@@ -25,6 +25,8 @@ public class o2Behavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.speed = 0.5f;
+        anim.Play("justMove");
         expArray = O22ExperimentSequence.O2ExperimentBlock2;
         //textO2.enabled = false;
         alarmLog = new bool[expArray.Length];

@@ -22,6 +22,8 @@ public class bp2Behavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.speed = 0.5f;
+        anim.Play("justMove");
         expArray = BP2ExperimentSequence.BpExperimentBlock2;
         //textBp.enabled = false;
         alarmLog = new bool[expArray.Length];

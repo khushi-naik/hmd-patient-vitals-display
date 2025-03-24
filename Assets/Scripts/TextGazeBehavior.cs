@@ -26,7 +26,7 @@ public class TextGazeBehavior : MonoBehaviour
     {
 
         flag = true;
-        consoleObj.text = flag.ToString();
+        //consoleObj.text = flag.ToString();
         CommonPrototypeVariables.hasSeenText = true;
         //textDesc.GetComponent<BoxCollider>().enabled = true;
         //textDesc.text = "text2";
@@ -39,7 +39,7 @@ public class TextGazeBehavior : MonoBehaviour
         Debug.Log("exittttttt!!! ");
 
         flag = false;
-        consoleObj.text = flag.ToString();
+        //consoleObj.text = flag.ToString();
         if (visibilityCoroutine != null)
         {
             StopCoroutine(visibilityCoroutine);
