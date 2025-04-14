@@ -24,6 +24,64 @@ public static class O21ExperimentSequence
     //patient 1 block 1
     public static readonly O2Block1[] o2ExperimentBlock1 =
     {
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{96f,96f,94f,92f,90f,89f,86f,85f,82f,80f,79f,77f,77f,77f,84f,88f,95f,97f,97f,97f},false),   //o2-l
+        new O2Block1(new float[]{97f,97f,97f,97f,97f,94f,92f,90f,89f,86f,85f,82f,80f,79f,77f,77f,77f,77f,77f,77f},false),   //hr-l,o2-l
+        new O2Block1(new float[]{84f,88f,95f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe1
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe2
+        new O2Block1(new float[]{96f,96f,96f,94f,93f,90f,89f,86f,84f,83f,80f,79f,76f,76f,76f,76f,80f,85f,89f,90f},false),   //bp-l,o2-l
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,95f,93f,91f,89f,86f,84f,83f,80f,79f,76f,76f,76f,76f,76f},false),   //hr-h,bp-h,o2-l
+        new O2Block1(new float[]{80f,85f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f},true),    //probe3
+        new O2Block1(new float[]{96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f},false),
+        new O2Block1(new float[]{96f,96f,96f,96f,96f,94f,92f,90f,89f,86f,85f,82f,80f,79f,77f,77f,77f,77f,84f,88f},false),   //o2-l
+        new O2Block1(new float[]{95f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},true),    //probe4
+        new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false),
+        new O2Block1(new float[]{96f,96f,96f,94f,92f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,97f,97f},false),   //bp-h,o2-l
+        new O2Block1(new float[]{97f,97f,97f,97f,94f,92f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,98f},false),   //hr-l,bp-h,o2-l
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,94f,92f,91f,89f,87f,86f,81f,80f,79f,78f,78f,78f,78f,78f,84f},false),   //hr-h,o2-l
+        new O2Block1(new float[]{95f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe5
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false)
+    };
+
+    //patient 1 block 2
+    /*public static readonly O2Block1[] o2ExperimentBlock1 =
+    {
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,94f,92f,91f,89f,87f,86f,81f,80f,79f,78f,78f,78f,78f,84f},false),   //hr-l,bp-h,o2-l
+        new O2Block1(new float[]{88f,95f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe1
+        new O2Block1(new float[]{98f,98f,98f,98f,94f,92f,91f,89f,87f,86f,81f,80f,79f,78f,78f,78f,84f,88f,95f,98f},false),   //o2-l
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{96f,96f,96f,96f,96f,94f,92f,91f,89f,87f,86f,81f,80f,79f,78f,78f,78f,78f,84f,88f},false),   //hr-l,o2-l
+        new O2Block1(new float[]{95f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},true),    //probe2
+        new O2Block1(new float[]{97f,97f,97f,95f,93f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,97f,97f},false),   //bp-l,o2-l
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe3
+        new O2Block1(new float[]{98f,98f,98f,95f,93f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,97f,97f},false),   //hr-h,o2-l
+        new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false),
+        new O2Block1(new float[]{95f,93f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false),   //o2-l
+        new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false),
+        new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,95f,93f,92f,89f,87f,86f,83f,80f,79f,78f,78f,78f,84f,88f},false),   //hr-h,bp-h,o2-l
+        new O2Block1(new float[]{95f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},true),    //probe4
+        new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false),
+        new O2Block1(new float[]{97f,97f,97f,94f,93f,90f,89f,86f,84f,83f,80f,79f,76f,76f,76f,76f,80f,85f,89f,90f},false),   //bp-h,o2-l
+        new O2Block1(new float[]{92f,94f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f},false),
+        new O2Block1(new float[]{96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f},false),
+        new O2Block1(new float[]{96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f,96f},true),    //probe5
+    };*/
+
+    //OLD
+    //patient 1 block 1
+    /*public static readonly O2Block1[] o2ExperimentBlock1 =
+    {
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false), //remove later
         //new O2Block1(new float[]{90f,90f,90f,90f,88f,87f,85f,84f,82f,80f,80f,80f,80f,80f,80f,82f,82f,84f,84f,84f},false), //o2-vl subblock2 of block1 start //remove later
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false), //remove later
@@ -44,7 +102,7 @@ public static class O21ExperimentSequence
         new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false), //subblock3 of block1 end
         new O2Block1(new float[]{97f,96f,96f,95.8f,95f,94.5f,94f,93.6f,93f,92.2f,92f,91f,90f,90f,90f,94f,95f,96f,97f,97f},false), //o2-l subblock4 of block1 start
         new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,96f,96f,96f,95f,94.4f,94f,93f,92.9f,92f,91.7f,91f,90.5f,90f},false),     //o2-l
-        /*new O2Block1(new float[]{90f,90f,90f,90f,87f,86f,85f,83f,82f,79f,82f,82f,82f,82f,82f,85f,87f,88f,89f,89f},false),     //o2-vl
+        new O2Block1(new float[]{90f,90f,90f,90f,87f,86f,85f,83f,82f,79f,82f,82f,82f,82f,82f,85f,87f,88f,89f,89f},false),     //o2-vl
         new O2Block1(new float[]{90f,94f,95f,96f,96f,95f,94f,93f,92f,91f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f},false),     //o2-l
         new O2Block1(new float[]{90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f,90f},true), //probe4 subblock4 of block1 end
         new O2Block1(new float[]{90f,90f,90f,90f,88f,86f,84f,83f,82f,81f,81f,81f,81f,81f,81f,85f,86f,87f,89f},false), //o2-vl subblock5 of block1 start
@@ -56,8 +114,8 @@ public static class O21ExperimentSequence
         new O2Block1(new float[]{93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f},false),
         new O2Block1(new float[]{93f,93f,93f,89f,88f,86f,85f,84f,82f,80f,79f,78f,76f,76f,76f,76f,82f,82f,82f,82f},false),     //o2-vl
         new O2Block1(new float[]{82f,85f,86f,88f,89f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f},false),
-        new O2Block1(new float[]{93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f},true) //probe6 subblock6 of block1 end*/
-    };
+        new O2Block1(new float[]{93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f,93f},true) //probe6 subblock6 of block1 end
+    };*/
 
     //patient 1 block 2
     /*public static readonly O2Block1[] o2ExperimentBlock1 =

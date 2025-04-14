@@ -22,7 +22,7 @@ public class oBehaviourScript : MonoBehaviour
     private O2Block1[] expArray;
     bool[] alarmLog;
     private TcpConnectionScript tcpObj;
-
+    private bool probeMsgSent =false;
 
     void Start()
     {
@@ -65,6 +65,12 @@ public class oBehaviourScript : MonoBehaviour
                     textBp.enabled = false;
                     textHr.enabled = false;
                     textHr.GetComponent<BoxCollider>().enabled = false;
+                    if (!probeMsgSent)
+                    {
+                        tcpObj.sendMessage("probeitis");
+                        probeMsgSent = true;
+                    }
+                    
                 }
                 else
                 {
@@ -80,6 +86,7 @@ public class oBehaviourScript : MonoBehaviour
                             renderer.enabled = true;
                         }
                     }
+                    probeMsgSent = false;
                     //textO2.enabled = true;
                     //textBp.enabled = true;
                     //textHr.enabled = true;

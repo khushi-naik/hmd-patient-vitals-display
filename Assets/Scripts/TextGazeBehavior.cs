@@ -62,7 +62,7 @@ public class TextGazeBehavior : MonoBehaviour
 
         Debug.Log("enter sleep ");
         //Wait for 4 seconds
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(5);
         //deb.text = "wait over";
         Debug.Log("about toooo false ");
         if (flag == false)
