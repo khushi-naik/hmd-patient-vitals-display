@@ -1,7 +1,4 @@
-﻿  pch.cpp
-  App.cpp
-  Main.cpp
-  UnityGenerated.cpp
+﻿  App.cpp
      Creating library C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\integratedPrototype.lib and object C:\Users\Khushi\hmd-patient-vitals-display\intBuild\build\bin\ARM64\Release\integratedPrototype.exp
   Generating code
   Finished generating code

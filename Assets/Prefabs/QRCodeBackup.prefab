@@ -3407,6 +3407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testing: {fileID: 4481784507271221435}
   probeAlertText: {fileID: 4740610994896741796}
+  consoleObject: {fileID: 1678890182404422099}
 --- !u!1 &9041421001594238193
 GameObject:
   m_ObjectHideFlags: 0

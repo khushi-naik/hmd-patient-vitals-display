@@ -9,6 +9,7 @@ public class StartExperimentSceneScript : MonoBehaviour
 {
     public TextMeshProUGUI testing;
     public TextMeshProUGUI probeAlertText;
+    public TextMeshProUGUI consoleObject;
     private Coroutine experimentCountdownCoroutine;
 
     void Start()
@@ -44,6 +45,7 @@ public class StartExperimentSceneScript : MonoBehaviour
 
         CommonPrototypeVariables.isExperimentStarted = true;
         experimentCountdownCoroutine = null;
+        consoleObject.enabled = false;
         gameObject.SetActive(false);
 
     }

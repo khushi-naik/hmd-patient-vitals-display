@@ -67,7 +67,7 @@ public class oBehaviourScript : MonoBehaviour
                     textHr.GetComponent<BoxCollider>().enabled = false;
                     if (!probeMsgSent)
                     {
-                        tcpObj.sendMessage("probeitis");
+                        tcpObj.sendMessage("probeitis," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         probeMsgSent = true;
                     }
                     

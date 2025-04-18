@@ -63,7 +63,7 @@ public class DwellBehavior : MonoBehaviour
         //Debug.Log("enter sleep ");
         //Wait for 4 seconds
         //conObj.text = "before countdown";
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         //deb.text = "wait over";
         //Debug.Log("about toooo false ");
         if (CommonPrototypeVariables.hasSeenText == false)
