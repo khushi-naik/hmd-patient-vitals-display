@@ -34,7 +34,7 @@ public static class O21ExperimentSequence
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe2
         new O2Block1(new float[]{96f,96f,96f,94f,93f,90f,89f,86f,84f,83f,80f,79f,76f,76f,76f,76f,80f,85f,89f,90f},false),   //bp-l,o2-l
-        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),   //p2 alarm before p1
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,95f,93f,91f,89f,86f,84f,83f,80f,79f,76f,76f,76f,76f,76f},false),   //hr-h,bp-h,o2-l
         new O2Block1(new float[]{80f,85f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f,91f},true),    //probe3
