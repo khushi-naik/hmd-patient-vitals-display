@@ -79,6 +79,7 @@ public class o2Behavior : MonoBehaviour
                             anim.Play("os2NormalToLow2");
                             if (!alarmLog[currentBlockIndex])
                             {
+                                Debug.Log("O22, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 tcpObj.sendMessage("O22, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }

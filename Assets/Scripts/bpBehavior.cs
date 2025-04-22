@@ -18,6 +18,7 @@ public class bpBehavior : MonoBehaviour
     private string previousTrend = "";
     int prevValue = 0;
     private BpBlock1[] expArray;
+    private BpBlock1[] expDiastolicArray;
     private bool[] alarmLog;
     private TcpConnectionScript tcpObj;
 
@@ -26,6 +27,7 @@ public class bpBehavior : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         expArray = Bp1ExperimentSequence.BpExperimentBlock1;
+        expDiastolicArray = Bp1ExperimentSequence.BpDiastolicExperimentBlock1;
         textBp.enabled = false;
         alarmLog = new bool[expArray.Length];
 
@@ -41,12 +43,16 @@ public class bpBehavior : MonoBehaviour
         if (CommonPrototypeVariables.isExperimentStarted)
         {
             BpBlock1 currentBlock = expArray[currentBlockIndex];
+            BpBlock1 currentDiastolicBlock = expDiastolicArray[currentBlockIndex];
             if (currentBlockIndex < expArray.Length)
             {
                 if (elapsedTimeNumber >= updateTime)
                 {
                     int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    int previousDiastolicVital = currentDiastolicBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     Bp1ExperimentSequence.bp1Block1Start = currentBlock.vitalValue[currentValueIndex];
+                    int currentDiastolicVital = currentDiastolicBlock.vitalValue[currentValueIndex];
+
                     if (Bp1ExperimentSequence.bp1Block1Start > previousVital)
                     {
                         /*if (Bp1ExperimentSequence.bp1Block1Start >= 138 && Bp1ExperimentSequence.bp1Block1Start < 156)
@@ -69,7 +75,7 @@ public class bpBehavior : MonoBehaviour
                                 alarmLog[currentBlockIndex] = true;
                             }
                         }*/
-                        if (Bp1ExperimentSequence.bp1Block1Start >= 138)
+                        if (Bp1ExperimentSequence.bp1Block1Start >= 138 || currentDiastolicVital >=90)
                         {
                             anim.speed = 1.75f;
                             anim.Play("bpNormalToHigh2");
@@ -128,7 +134,7 @@ public class bpBehavior : MonoBehaviour
                                 alarmLog[currentBlockIndex] = true;
                             }
                         }*/
-                        if (Bp1ExperimentSequence.bp1Block1Start <= 102)
+                        if (Bp1ExperimentSequence.bp1Block1Start <= 102 || currentDiastolicVital<70)
                         {
                             anim.speed = 1.75f;
                             anim.Play("bpNormalToLow2");
@@ -172,12 +178,12 @@ public class bpBehavior : MonoBehaviour
                             anim.speed = 0.5f;
                             anim.Play("justMoveBp");
                         }
-                        else if (Bp1ExperimentSequence.bp1Block1Start <= 102)
+                        else if (Bp1ExperimentSequence.bp1Block1Start <= 102 || currentDiastolicVital < 70)
                         {
                             anim.speed = 0.5f;
                             anim.Play("bpStaticNormalToLow2");
                         }
-                        else if (Bp1ExperimentSequence.bp1Block1Start >= 138)
+                        else if (Bp1ExperimentSequence.bp1Block1Start >= 138 || currentDiastolicVital >= 90)
                         {
                             anim.speed = 0.5f;
                             anim.Play("bpStaticNormalToHigh2");
@@ -224,10 +230,10 @@ public class bpBehavior : MonoBehaviour
                         currentValueIndex = 0;
                         currentBlockIndex++;
                     }
-                    System.Random random = new System.Random();
-                    int diastolicBpValue = random.Next(30, 51);
-                    diastolicBpValue = Bp1ExperimentSequence.bp1Block1Start - diastolicBpValue;
-                    textBp.text = "BP: " + Bp1ExperimentSequence.bp1Block1Start.ToString() + "/" + diastolicBpValue.ToString();
+                    //System.Random random = new System.Random();
+                    //int diastolicBpValue = random.Next(30, 51);
+                    //diastolicBpValue = Bp1ExperimentSequence.bp1Block1Start - diastolicBpValue;
+                    textBp.text = "BP: " + Bp1ExperimentSequence.bp1Block1Start.ToString() + "/" + currentDiastolicVital.ToString();
                     elapsedTimeNumber = 0f;
                 }
                 elapsedTimeNumber += Time.deltaTime;

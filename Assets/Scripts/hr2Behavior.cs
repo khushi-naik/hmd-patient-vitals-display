@@ -64,6 +64,7 @@ public class hr2Behavior : MonoBehaviour
                             anim.Play("hr2NormalToHigh2");
                             if (!alarmLog[currentBlockIndex])
                             {
+                                Debug.Log("HR2, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + currentVital + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 tcpObj.sendMessage("HR2, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + currentVital + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
@@ -95,6 +96,7 @@ public class hr2Behavior : MonoBehaviour
                             anim.Play("hr2NormalToLow2");
                             if (!alarmLog[currentBlockIndex])
                             {
+                                Debug.Log("HR2, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + currentVital + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 tcpObj.sendMessage("HR2, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + currentVital + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }

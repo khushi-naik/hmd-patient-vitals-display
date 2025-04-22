@@ -25,7 +25,7 @@ public static class O22ExperimentSequence
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), //probe2
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), 
-        new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
+        new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f,98f,98f}),  //p2 before p1
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), //probe3
