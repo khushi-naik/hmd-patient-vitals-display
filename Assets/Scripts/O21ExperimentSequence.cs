@@ -24,7 +24,7 @@ public static class O21ExperimentSequence
     //patient 1 block 1
     public static readonly O2Block1[] o2ExperimentBlock1 =
     {
-        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),   //dummy block
+        //new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),   //dummy block
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
         new O2Block1(new float[]{96f,96f,94f,92f,90f,89f,86f,85f,82f,80f,79f,77f,77f,77f,84f,88f,95f,97f,97f,97f},false),   //o2-l

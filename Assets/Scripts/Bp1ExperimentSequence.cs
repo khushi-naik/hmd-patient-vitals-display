@@ -23,7 +23,7 @@ public class Bp1ExperimentSequence
     //patient 1 block1 = 23+1
     public static readonly BpBlock1[] BpExperimentBlock1 =
     {
-        new BpBlock1(new int[]{110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110}),   //dummy block
+        //new BpBlock1(new int[]{110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110}),   //dummy block
         new BpBlock1(new int[]{110,108,105,104,97,95,94,93,92,90,89,87,86,85,85,85,90,101,115,120}),                    //bp-l
         new BpBlock1(new int[]{124,130,137,140,142,143,145,146,149,150,153,154,155,155,155,140,133,121,111,108}),   //hr-h,bp-h
         new BpBlock1(new int[]{108,108,108,108,108,108,108,108,108,108,108,108,108,108,108,108,108,108,108,108}),
@@ -51,7 +51,7 @@ public class Bp1ExperimentSequence
 
     public static readonly BpBlock1[] BpDiastolicExperimentBlock1 =
     {
-        new BpBlock1(new int[]{81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81}),   //dummy block
+        //new BpBlock1(new int[]{81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81}),   //dummy block
         new BpBlock1(new int[]{75,75,75,75,74,73,75,75,75,75,75,75,75,75,75,75,75,80,81,81}),                       //bp-l
         new BpBlock1(new int[]{85,85,85,85,85,85,85,85,85,83,82,81,81,81,81,81,81,81,81,81}),                       //hr-h,bp-h
         new BpBlock1(new int[]{81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81,81}),

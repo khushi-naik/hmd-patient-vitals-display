@@ -24,7 +24,7 @@ public static class HR1ExperimentSequence
     //patient 1 block 1
     public static readonly Block1[] hrExperimentBlock1 =
     {
-        new Block1(new int[]{70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70}),                     //dummy block
+        //new Block1(new int[]{70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70}),                     //dummy block
         new Block1(new int[]{77,80,89,90,95,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98}),
         new Block1(new int[]{98,98,98,105,107,110,111,112,113,114,115,116,117,117,117,117,117,117,117,117}),    //hr-h,bp-h
         new Block1(new int[]{103,95,92,87,84,80,79,76,70,65,65,65,65,65,65,65,65,65,65,65}),

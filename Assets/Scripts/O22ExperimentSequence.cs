@@ -15,7 +15,7 @@ public static class O22ExperimentSequence
     //patient 2 block 1 = 23+1
     public static readonly O2Block2[] O2ExperimentBlock2 =
     {
-        new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), //dummy block
+        //new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), //dummy block
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), 
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
