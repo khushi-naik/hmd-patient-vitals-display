@@ -21,6 +21,7 @@ public class bpBehavior : MonoBehaviour
     private BpBlock1[] expDiastolicArray;
     private bool[] alarmLog;
     private TcpConnectionScript tcpObj;
+    int previousVital;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +49,15 @@ public class bpBehavior : MonoBehaviour
             {
                 if (elapsedTimeNumber >= updateTime)
                 {
-                    int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    if (currentValueIndex == 0)
+                    {
+                        previousVital = Bp1ExperimentSequence.bp1Block1Start;
+                    }
+                    else
+                    {
+                        previousVital = currentBlock.vitalValue[currentValueIndex - 1];
+                    }
+                    //int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     int previousDiastolicVital = currentDiastolicBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     Bp1ExperimentSequence.bp1Block1Start = currentBlock.vitalValue[currentValueIndex];
                     int currentDiastolicVital = currentDiastolicBlock.vitalValue[currentValueIndex];
@@ -81,8 +90,8 @@ public class bpBehavior : MonoBehaviour
                             anim.Play("bpNormalToHigh2");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                Debug.Log("BP1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + Bp1ExperimentSequence.bp1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                                tcpObj.sendMessage("BP1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + Bp1ExperimentSequence.bp1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                Debug.Log("BP1,expA1 normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + Bp1ExperimentSequence.bp1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("BP1,expA1 normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + Bp1ExperimentSequence.bp1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
                         }
@@ -140,8 +149,8 @@ public class bpBehavior : MonoBehaviour
                             anim.Play("bpNormalToLow2");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                Debug.Log("BP1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                                tcpObj.sendMessage("BP1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                Debug.Log("BP1,expA1 normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("BP1,expA1 normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
                         }

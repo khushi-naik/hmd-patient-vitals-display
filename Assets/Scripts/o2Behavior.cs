@@ -20,7 +20,8 @@ public class o2Behavior : MonoBehaviour
     private O2Block2[] expArray;
     bool[] alarmLog;
     private TcpConnectionScript tcpObj;
-
+    private float previousVital;
+    private float currentVital = 98f;
 
     void Start()
     {
@@ -50,9 +51,16 @@ public class o2Behavior : MonoBehaviour
                 
                 if (elapsedTimeNumber >= updateTime)
                 {
-
-                    float previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
-                    float currentVital = currentBlock.vitalValue[currentValueIndex];
+                    if (currentValueIndex == 0)
+                    {
+                        previousVital = currentVital;
+                    }
+                    else
+                    {
+                        previousVital = currentBlock.vitalValue[currentValueIndex - 1];
+                    }
+                    //float previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    currentVital = currentBlock.vitalValue[currentValueIndex];
                     if (currentVital > previousVital)
                     {
                         if (currentVital <= 95)

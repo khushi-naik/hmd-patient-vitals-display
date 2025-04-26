@@ -33,12 +33,12 @@ public static class O22ExperimentSequence
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}), //probe4
         new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
-        new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f}),
-        new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f}), 
+        new O2Block2(new float[]{98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f, 98f})
+        /*new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f}), 
         new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f}),
         new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f}),
         new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f}),                    //probe5
-        new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f})
+        new O2Block2(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f})*/
     };
 
     //patient 2 block 2 = 23+1

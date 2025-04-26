@@ -17,6 +17,8 @@ public class bp2Behavior : MonoBehaviour
     private BpBlock2[] expArray;
     private bool[] alarmLog;
     private TcpConnectionScript tcpObj;
+    private int previousVital;
+    private int currentVital=125;
 
     // Start is called before the first frame update
     void Start()
@@ -44,8 +46,16 @@ public class bp2Behavior : MonoBehaviour
             {
                 if (elapsedTimeNumber >= updateTime)
                 {
-                    int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
-                    int currentVital = currentBlock.vitalValue[currentValueIndex];
+                    if (currentValueIndex == 0)
+                    {
+                        previousVital = currentVital;
+                    }
+                    else
+                    {
+                        previousVital = currentBlock.vitalValue[currentValueIndex - 1];
+                    }
+                    //int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    currentVital = currentBlock.vitalValue[currentValueIndex];
                     if (currentVital > previousVital)
                     {
                         if (currentVital >= 138)

@@ -23,6 +23,7 @@ public class oBehaviourScript : MonoBehaviour
     bool[] alarmLog;
     private TcpConnectionScript tcpObj;
     private bool probeMsgSent =false;
+    private float previousVital;
 
     void Start()
     {
@@ -103,8 +104,15 @@ public class oBehaviourScript : MonoBehaviour
                     {
                         probeAlertText.text = "Please answer to the probe in 20";
                     }
-                    
-                    float previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    if (currentValueIndex == 0)
+                    {
+                        previousVital = O21ExperimentSequence.o21Block1Start;
+                    }
+                    else
+                    {
+                        previousVital = currentBlock.vitalValue[currentValueIndex - 1];
+                    }
+                    //float previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     O21ExperimentSequence.o21Block1Start = currentBlock.vitalValue[currentValueIndex];
                     if (O21ExperimentSequence.o21Block1Start > previousVital)
                     {
@@ -163,8 +171,8 @@ public class oBehaviourScript : MonoBehaviour
                             if (!alarmLog[currentBlockIndex])
                             {
                                 //tcpObj.sendMessage("hello from script");
-                                Debug.Log("O21, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                                tcpObj.sendMessage("O21, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                Debug.Log("O21,expA1 normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("O21,expA1 normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + O21ExperimentSequence.o21Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
 
                             }

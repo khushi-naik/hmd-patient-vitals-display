@@ -19,7 +19,7 @@ public static class O21ExperimentSequence
     public static string inc = "increase";
     public static string dec = "decrease";
     public static string stat = "static";
-    public static float o21Block1Start = 96;
+    public static float o21Block1Start = 98f;
 
     //patient 1 block 1
     public static readonly O2Block1[] o2ExperimentBlock1 =
@@ -42,12 +42,12 @@ public static class O21ExperimentSequence
         new O2Block1(new float[]{96f,96f,96f,96f,96f,94f,92f,90f,89f,86f,85f,82f,80f,79f,77f,77f,77f,77f,84f,88f},false),   //o2-l
         new O2Block1(new float[]{95f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},true),    //probe4
         new O2Block1(new float[]{97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f,97f},false),
-        new O2Block1(new float[]{96f,96f,96f,94f,92f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,97f,97f},false),   //bp-h,o2-l
-        new O2Block1(new float[]{97f,97f,97f,97f,94f,92f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,98f},false),   //hr-l,bp-h,o2-l
+        new O2Block1(new float[]{96f,96f,96f,94f,92f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,97f,97f},false)   //bp-h,o2-l
+        /*new O2Block1(new float[]{97f,97f,97f,97f,94f,92f,91f,89f,87f,85f,82f,80f,79f,78f,78f,78f,84f,88f,95f,98f},false),   //hr-l,bp-h,o2-l
         new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false),
         new O2Block1(new float[]{98f,98f,98f,98f,98f,94f,92f,91f,89f,87f,86f,81f,80f,79f,78f,78f,78f,78f,78f,84f},false),   //hr-h,o2-l
         new O2Block1(new float[]{95f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},true),    //probe5
-        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false)
+        new O2Block1(new float[]{98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f,98f},false)*/
     };
 
     //patient 1 block 2

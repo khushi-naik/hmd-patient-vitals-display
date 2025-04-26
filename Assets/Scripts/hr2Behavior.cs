@@ -21,6 +21,8 @@ public class hr2Behavior : MonoBehaviour
     int prevValue = 0;
     bool[] alarmLog;
     private TcpConnectionScript tcpObj;
+    private int previousVital;
+    private int currentVital = 65;
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +54,16 @@ public class hr2Behavior : MonoBehaviour
 
                 if (elapsedTimeNumber >= updateTime)
                 {
-                    int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
-                    int currentVital = currentBlock.vitalValue[currentValueIndex];
+                    if (currentValueIndex == 0)
+                    {
+                        previousVital = currentVital;
+                    }
+                    else
+                    {
+                        previousVital = currentBlock.vitalValue[currentValueIndex - 1];
+                    }
+                    //int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    currentVital = currentBlock.vitalValue[currentValueIndex];
                     
                     // Play different animations based on conditions
                     if (currentVital > previousVital)

@@ -28,6 +28,7 @@ public class hrBehavior : MonoBehaviour
     int prevValue = 0;
     bool[] alarmLog;
     private TcpConnectionScript tcpObj;
+    private int previousVital;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +69,15 @@ public class hrBehavior : MonoBehaviour
 
                 if (elapsedTimeNumber >= updateTime)
                 {
-                    int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
+                    if (currentValueIndex == 0)
+                    {
+                        previousVital = HR1ExperimentSequence.hr1Block1Start;
+                    }
+                    else
+                    {
+                        previousVital = currentBlock.vitalValue[currentValueIndex - 1];
+                    }
+                    //int previousVital = currentBlock.vitalValue[Mathf.Max(currentValueIndex - 1, 0)];
                     HR1ExperimentSequence.hr1Block1Start = currentBlock.vitalValue[currentValueIndex];
                     /*elapsedTimeNumber = 0f;
                     currentValueIndex++;
@@ -117,8 +126,8 @@ public class hrBehavior : MonoBehaviour
                             anim.Play("hrNormalToHigh2");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                Debug.Log("HR1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                                tcpObj.sendMessage("HR1, normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                Debug.Log("HR1,expA1 normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("HR1,expA1 normal to high_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
                         }
@@ -179,8 +188,8 @@ public class hrBehavior : MonoBehaviour
                             anim.Play("hrNormalToLow2");
                             if (!alarmLog[currentBlockIndex])
                             {
-                                Debug.Log("HR1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                                tcpObj.sendMessage("HR1, normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                Debug.Log("HR1,expA1 normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                                tcpObj.sendMessage("HR1,expA1 normal to low_blockno" + currentBlockIndex + "_curval" + currentValueIndex.ToString() + "_prev" + previousVital + "_blstval" + HR1ExperimentSequence.hr1Block1Start + "," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                                 alarmLog[currentBlockIndex] = true;
                             }
                         }

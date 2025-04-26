@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
+using System;
 
 public class StartExperimentSceneScript : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class StartExperimentSceneScript : MonoBehaviour
     public TextMeshProUGUI probeAlertText;
     public TextMeshProUGUI consoleObject;
     private Coroutine experimentCountdownCoroutine;
+    private TcpConnectionScript tcpObj;
 
     void Start()
     {
         probeAlertText.enabled = false; //keep alert hidden till a probe occurs
+        GameObject obj = GameObject.Find("testTCP");
+        if (obj != null)
+        {
+            tcpObj = obj.GetComponent<TcpConnectionScript>();
+        }
     }
 
     public void OnSelectEntered(SelectEnterEventArgs _)
@@ -44,6 +51,7 @@ public class StartExperimentSceneScript : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         CommonPrototypeVariables.isExperimentStarted = true;
+        tcpObj.sendMessage("expA1 started at," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         experimentCountdownCoroutine = null;
         consoleObject.enabled = false;
         gameObject.SetActive(false);

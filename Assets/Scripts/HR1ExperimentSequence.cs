@@ -17,7 +17,7 @@ public static class HR1ExperimentSequence
     public static string inc = "increase";
     public static string dec = "decrease";
     public static string stat = "static";
-    public static int hr1Block1Start = 120;
+    public static int hr1Block1Start = 77;
 
 
 
@@ -42,12 +42,12 @@ public static class HR1ExperimentSequence
         new Block1(new int[]{63,67,69,70,74,77,79,81,85,88,92,95,96,97,99,99,99,99,99,99}),
         new Block1(new int[]{99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99}),                     //probe4
         new Block1(new int[]{99,99,99,99,105,108,110,111,112,113,114,115,116,118,118,118,110,105,101,101}),     //hr-h
-        new Block1(new int[]{101,95,92,87,84,80,79,76,71,67,65,65,65,65,65,65,65,65,65,65}),
-        new Block1(new int[]{65,65,65,65,58,57,56,55,54,53,52,51,50,49,49,49,49,56,58,61}),                     //hr-l,bp-h,o2-l
+        new Block1(new int[]{101,95,92,87,84,80,79,76,71,67,65,65,65,65,65,65,65,65,65,65})
+        /*new Block1(new int[]{65,65,65,65,58,57,56,55,54,53,52,51,50,49,49,49,49,56,58,61}),                     //hr-l,bp-h,o2-l
         new Block1(new int[]{63,67,69,70,74,77,79,81,85,88,92,95,96,97,99,99,99,99,99,99}),
         new Block1(new int[]{99,99,99,99,99,105,108,110,111,112,113,114,115,116,118,118,118,118,118,104}),        //hr-h,o2-l
         new Block1(new int[]{93,85,80,76,76,76,76,76,76,76,76,76,76,76,76,76,76,76,76,76}),                     //probe5
-        new Block1(new int[]{70,68,66,64,63,57,55,54,53,51,48,46,45,43,42,42,42,42,42,42})                       //hr-l
+        new Block1(new int[]{70,68,66,64,63,57,55,54,53,51,48,46,45,43,42,42,42,42,42,42})   */                    //hr-l
     };
 
     //patient 1 block 2
