@@ -63,10 +63,10 @@ public class hrBehavior : MonoBehaviour
     {
         if (CommonPrototypeVariables.isExperimentStarted)
         {
-            Block1 currentBlock = expArray[currentBlockIndex];
+            
             if (currentBlockIndex < expArray.Length)
             {
-
+                Block1 currentBlock = expArray[currentBlockIndex];
                 if (elapsedTimeNumber >= updateTime)
                 {
                     if (currentValueIndex == 0)

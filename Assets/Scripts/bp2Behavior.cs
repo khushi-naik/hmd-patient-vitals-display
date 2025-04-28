@@ -41,9 +41,10 @@ public class bp2Behavior : MonoBehaviour
     {
         if (CommonPrototypeVariables.isExperimentStarted)
         {
-            BpBlock2 currentBlock = expArray[currentBlockIndex];
+            
             if (currentBlockIndex < expArray.Length)
             {
+                BpBlock2 currentBlock = expArray[currentBlockIndex];
                 if (elapsedTimeNumber >= updateTime)
                 {
                     if (currentValueIndex == 0)

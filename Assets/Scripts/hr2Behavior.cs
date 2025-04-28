@@ -48,10 +48,10 @@ public class hr2Behavior : MonoBehaviour
     {
         if (CommonPrototypeVariables.isExperimentStarted)
         {
-            HrBlock2 currentBlock = expArray[currentBlockIndex];
+            
             if (currentBlockIndex < expArray.Length)
             {
-
+                HrBlock2 currentBlock = expArray[currentBlockIndex];
                 if (elapsedTimeNumber >= updateTime)
                 {
                     if (currentValueIndex == 0)

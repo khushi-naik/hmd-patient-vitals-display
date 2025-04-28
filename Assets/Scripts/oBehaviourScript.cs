@@ -23,6 +23,7 @@ public class oBehaviourScript : MonoBehaviour
     bool[] alarmLog;
     private TcpConnectionScript tcpObj;
     private bool probeMsgSent =false;
+    private bool endMsgSent = false;
     private float previousVital;
 
     void Start()
@@ -98,11 +99,11 @@ public class oBehaviourScript : MonoBehaviour
                     int countDownValue = currentBlock.vitalValue.Length - currentValueIndex - 1;
                     if(countDownValue > 0)
                     {
-                        probeAlertText.text = "Please answer to the probe in " + countDownValue.ToString();
+                        probeAlertText.text = "Please answer to the probe (P1's vital trend) in " + countDownValue.ToString();
                     }
                     else
                     {
-                        probeAlertText.text = "Please answer to the probe in 20";
+                        probeAlertText.text = "Please answer to the probe (P1's vital trend) in 20";
                     }
                     if (currentValueIndex == 0)
                     {
@@ -226,6 +227,18 @@ public class oBehaviourScript : MonoBehaviour
                     elapsedTimeNumber = 0f;
                 }
                 elapsedTimeNumber += Time.deltaTime;
+            }
+            else
+            {
+                if (!endMsgSent)
+                {
+                    probeAlertText.enabled = true;
+                    Debug.Log("stop playing");
+                    tcpObj.sendMessage("expA1 ended," + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    probeAlertText.text = "Stop playing FruitNinja.. Patients have been discharged!";
+                    endMsgSent = true;
+                }
+
             }
         }
     }

@@ -43,10 +43,11 @@ public class bpBehavior : MonoBehaviour
     {
         if (CommonPrototypeVariables.isExperimentStarted)
         {
-            BpBlock1 currentBlock = expArray[currentBlockIndex];
-            BpBlock1 currentDiastolicBlock = expDiastolicArray[currentBlockIndex];
+            
             if (currentBlockIndex < expArray.Length)
             {
+                BpBlock1 currentBlock = expArray[currentBlockIndex];
+                BpBlock1 currentDiastolicBlock = expDiastolicArray[currentBlockIndex];
                 if (elapsedTimeNumber >= updateTime)
                 {
                     if (currentValueIndex == 0)
